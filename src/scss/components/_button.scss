@@ -36,6 +36,19 @@
       }
     }
   }
+
+  &--border-transparent {
+    border: 1px solid var(--ui-accent-medium-contrast, rgba(255, 178, 28, 0.60));
+    color: var(--typography-white, #FFF);
+
+    @media screen and (min-width: 1024px) {
+    &:hover{
+      border: 1px solid var(--ui-accent-medium-contrast, rgba(255, 178, 28, 0.60));
+      background: var(--ui-accent, #FFB21C);
+      color: var(--typography-black, #0D0D0D);
+    }
+    }
+  }
 }
 
 .location-btn{
@@ -46,6 +59,36 @@
     display: flex;
     align-items: flex-start;
     transition: 0.3s;
+  }
+}
+
+.social {
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__link {
+    display: flex;
+    width: 37px;
+    height: 37px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--ui-white, #fff);
+    transition: 0.3s;
+
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        background: var(--ui-accent, #FFB21C);
+      }
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
   }
 }
 

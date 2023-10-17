@@ -79,6 +79,12 @@
       font-size: 14px;
     }
 
+    @media screen and (min-width: 1024px) {
+      &:hover{
+        color: #ffffff;
+      }
+    }
+
     &--mobile{
       color: var(--ui-white, #FFF);
     }
@@ -112,10 +118,6 @@
   }
 }
 
-.burger {
-  &__line {
-  }
-}
 .header-bottom {
   &__inner {
     display: flex;
@@ -152,103 +154,25 @@
   }
 }
 
-.search {
-  flex-grow: 1;
-
-  &__inner {
-    height: 38px;
-    display: flex;
-  }
-
-  &__input {
-    color: var(--typography-black-medium-contrast, rgba(13, 13, 13, 0.6));
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    border-radius: 7px 0 0 7px;
-    padding: 15px;
-    border: transparent;
-    width: 100%;
-  }
-
-  &__button {
-    display: flex;
-    padding: 8px 17px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 7px 7px 0px;
-    background: var(--ui-dark, #2c2f31);
-  }
-
-  &__icon {
-    width: 20px;
-    height: 20px;
-    fill: #ffffff;
+.burger {
+  &__line {
   }
 }
 
-.social {
-  &__inner {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
 
-  &__item {
-  }
-
-  &__link {
-    display: flex;
-    width: 37px;
-    height: 37px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: var(--ui-white, #fff);
-    transition: 0.3s;
-
-    @media screen and (min-width: 1024px) {
-      &:hover {
-        background: var(--ui-accent, #FFB21C);
-      }
-    }
-  }
-
-  &__icon {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: flex-start;
-  }
-}
-
-.header-top {
-
-  &__working {
-  }
-}
-.working {
-  &__item {
-    color: var(--typography-white, #FFF);
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    &:not(:last-child){
-      margin-bottom: 5px;
-    }
-  }
-}
 
 .mobile-nav{
   display: none;
 
   @include max991 {
     display: block;
+  }
+
+  @include max600 {
+    .logo{
+      width: 105px;
+      height: 29px;
+    }
   }
 
   &__container{
@@ -258,7 +182,7 @@
     height: 100%;
     overflow: auto;
 
-    @include max375 {
+    @include max600 {
       padding: 15px 15px 40px 15px;
     }
   }
@@ -288,5 +212,10 @@
       display: block;
     }
   }
+}
+
+.logo{
+  width: 135px;
+  height: 37px;
 }
 
