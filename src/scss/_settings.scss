@@ -139,13 +139,25 @@ ul{
   list-style: none;
 }
 
-//input,
-//textarea {
-//  appearance: none;
-//  -webkit-appearance: none;
-//  font-family: inherit;
-//  border: none;
-//  color: #000;
-//  opacity: 1;
-//  outline: none;
-//}
+input,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  border: none;
+  color: #000;
+  opacity: 1;
+  outline: none;
+}
+
+a {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  transition: 300ms;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

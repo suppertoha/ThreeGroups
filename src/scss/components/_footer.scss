@@ -149,11 +149,7 @@
     flex-wrap: wrap;
 
     @media screen and (max-width: 1150px) {
-      gap: 20px 210px;
-    }
-
-    @include max768 {
-      gap: 20px 45px;
+      gap: 20px;
     }
   }
 
@@ -166,11 +162,14 @@
     line-height: normal;
 
     @media screen and (max-width: 1150px) {
+      width: 48%;
       &:nth-child(1){
-        order: 4
+        order: 4;
+        text-align: right;
       }
       &:nth-child(2){
         order: 2;
+        text-align: right;
       }
       &:nth-child(3){
         order: 1;
@@ -183,6 +182,9 @@
     @include max600 {
       width: 100%;
       text-align: center;
+      &:nth-child(1), &:nth-child(2){
+        text-align: center;
+      }
     }
   }
 
