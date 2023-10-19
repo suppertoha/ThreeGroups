@@ -26,6 +26,13 @@
     align-items: center;
     border-radius: 0px 7px 7px 0px;
     background: var(--ui-dark, #2c2f31);
+    transition: 0.3s;
+
+    @media screen and (min-width: 1024px) {
+    &:hover{
+      background: var(--ui-accent, #FFB21C);
+    }
+    }
   }
 
   &__icon {

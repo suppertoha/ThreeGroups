@@ -8,24 +8,132 @@
     @include('partials/header.html')
     <main class="main">
       <div class="banner-block">
-        <div class="banner-block__inner">
-          <div class="banner-block__card-arrow arrow-card">
-            <div class="arrow-card__inner">
-              <div class="arrow-card__body">
-                
+        <div class="container">
+          <div class="banner-block__inner">
+            <div class="banner-block__card-arrow arrow-card">
+              <div class="arrow-card__inner">
+                <div class="arrow-card__body">
+                  <div class="banner-block__container">
+                    <div class="banner-block__name">Lumen</div>
+                    <ul class="banner-block__buttons buttons-banner">
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Курск
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Ульяновск
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Тольятти
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Краснодар
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Омск
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Саратов
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Железногорск
+                        </span>
+                        <div class="link-info__date">
+                          23.02
+                        </div>
+                      </a>
+                      </li>
+                      <li class="buttons-banner__item">
+                        <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
+                          Показать еще
+                        </span>
+                        <div class="link-info__date">
+                          5
+                        </div>
+                      </a>
+                      </li>
+                    </ul>
+
+                    <ul class="banner-block__address address">
+                      <li class="address__item">Курск, ДК Губернаторский</li>
+                      <li class="address__item">23 Фев 2023  16:00 Пт</li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="arrow-card__animate animate-arrow">
+                  <li class="animate-arrow__icon">
+                    <svg class="arow">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                  <li class="animate-arrow__icon">
+                    <svg class="arow">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </li>
+                </ul>
               </div>
-              <ul class="arrow-card__animate animate-arrow">
-                <li class="animate-arrow__icon">
-                  <svg class="arow">
-                    <use xlink:href="img/sprite.svg#"></use>
-                  </svg>
-                </li>
-                <li class="animate-arrow__icon">
-                  <svg class="arow">
-                    <use xlink:href="img/sprite.svg#"></use>
-                  </svg>
-                </li>
-              </ul>
+            </div>
+
+            <div class="banner-block__right">
+              <div class="banner-block__images">
+                <picture>
+                  <source srcset="img/banner-img-600.webp" type="image/webp" media="(max-width: 600px)" width="345" height="431" alt="img">
+                  <source srcset="img/banner-img-1024.webp" type="image/webp" media="(max-width: 1024px)" width="708" height="431" alt="img">
+                  <source srcset="img/banner-img.webp" type="image/webp">
+                  <img loading="lazy" src="banner-img.jpg" class="image" width="826" height="476" alt="img">
+                </picture>
+
+              </div>
+
+              <div class="banner-block__calendar calensar-banner">
+                <div class="calensar-banner__inner">
+                  <div class="calensar-banner__img">
+                    <svg class="img">
+                      <use xlink:href="img/sprite.svg#calendar"></use>
+                    </svg>
+                  </div>
+                  <div class="calensar-banner__date">
+                    23 Фев 2023 — 24 Мар 2023
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

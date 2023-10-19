@@ -400,6 +400,14 @@ a:hover {
   align-items: center;
   border-radius: 0px 7px 7px 0px;
   background: var(--ui-dark, #2c2f31);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1024px) {
+  .search__button:hover {
+    background: var(--ui-accent, #FFB21C);
+  }
 }
 .search__icon {
   width: 20px;
@@ -573,7 +581,7 @@ a:hover {
 }
 @media screen and (min-width: 1024px) {
   .header-top__link:hover {
-    color: #ffffff;
+    color: var(--typography-black-medium-contrast, rgb(13, 13, 13));
   }
 }
 .header-top__link--mobile {
@@ -1129,5 +1137,188 @@ a:hover {
   top: 0;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
+}
+
+.banner-block__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.banner-block__card-arrow {
+  max-width: 584px;
+}
+.banner-block__calendar {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.banner-block__container {
+  padding: 60px;
+}
+.banner-block__name {
+  color: var(--typography-white, #FFF);
+  font-family: Inter;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 105.023%;
+  text-transform: uppercase;
+}
+.banner-block__buttons {
+  margin: 40px 0;
+}
+.banner-block__right {
+  position: relative;
+}
+.banner-block__images {
+  border-radius: 12px 12px 70px 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  height: 100%;
+}
+.banner-block__images picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  height: 100%;
+}
+.banner-block__images picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-card {
+  position: relative;
+}
+.arrow-card__inner {
+  background: #FFB21C;
+  border-radius: 70px 12px 12px 12px;
+  overflow: hidden;
+}
+.arrow-card__body {
+  border-radius: 70px 12px 147px 12px;
+  background: var(--ui-dark, #2C2F31);
+  position: relative;
+  z-index: 2;
+}
+.arrow-card__animate {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.buttons-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.buttons-banner__item {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: calc(50% - 20px);
+}
+.buttons-banner__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+
+.btn--justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.address__item {
+  color: var(--typography-white, #FFF);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.animate-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.animate-arrow__icon {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.animate-arrow__icon .arow {
+  width: 25px;
+  height: 25px;
+}
+
+.calensar-banner__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.calensar-banner__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 7px 0px 0px 7px;
+  background: var(--ui-accent, #FFB21C);
+  padding: 10px 18px;
+}
+.calensar-banner__img .img {
+  width: 20px;
+  height: 20px;
+}
+.calensar-banner__date {
+  border-radius: 0 7px 7px 0;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: var(--typography-black, #0D0D0D);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  padding: 0 15px 0 20px;
+  margin-left: -1px;
 }
 /*# sourceMappingURL=main.css.map */

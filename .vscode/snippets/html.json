@@ -103,8 +103,10 @@
     "prefix": "g-picture",
     "body": [
       "<picture>",
-      "  <source srcset=\"$1.webp\" type=\"image/webp\">",
-      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "  <source srcset=\"img/$1.webp\" type=\"image/webp\" media=\"(max-width: 600px)\" width=\"$4\" height=\"$5\" alt=\"img\">",
+      "  <source srcset=\"img/$1.webp\" type=\"image/webp\" media=\"(max-width: 1024px)\" width=\"$4\" height=\"$5\" alt=\"img\">",
+      "  <source srcset=\"img/$1.webp\" type=\"image/webp\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"img\">",
       "</picture>"
     ],
     "description": "Snippet for basic logo structure"
@@ -113,7 +115,7 @@
     "scope": "html",
     "prefix": "g-svgimg",
     "body": [
-      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" alt=\"img\">"
     ],
     "description": "Snippet for simple html svg images"
   },
@@ -149,3 +151,4 @@
     "description": "Snippet for basic tabs structure"
   }
 }
+

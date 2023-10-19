@@ -81,7 +81,7 @@
 
     @media screen and (min-width: 1024px) {
       &:hover{
-        color: #ffffff;
+        color: var(--typography-black-medium-contrast, rgba(13, 13, 13, 1));
       }
     }
 
