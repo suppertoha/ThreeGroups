@@ -3,20 +3,59 @@
   &__inner {
     display: flex;
     gap: 20px;
+
+    @media screen and (min-width: 1024px) {
+      &:hover{
+        .banner-block__images picture{
+          scale: 1.05;
+        }
+        .animate-arrow__inner{
+          transform: translateX(0px);
+        }
+      }
+    }
+
+    @include max991 {
+      flex-direction: column-reverse;
+    }
+
+    @include max600 {
+      gap: 15px;
+    }
   }
 
   &__card-arrow {
     max-width: 584px;
+
+    @include max1366 {
+      max-width: 508px;
+    }
+
+    @include max991 {
+      max-width: 100%;
+    }
   }
 
   &__calendar{
     position: absolute;
     bottom: 30px;
     left: 30px;
+
+    @include max991 {
+      display: none;
+    }
   }
 
   &__container {
     padding: 60px;
+
+    @include max991 {
+      padding: 40px;
+    }
+
+    @include max600 {
+      padding: 30px;
+    }
   }
 
   &__name {
@@ -27,13 +66,28 @@
     font-weight: 700;
     line-height: 105.023%;
     text-transform: uppercase;
+
+    @include max991 {
+      font-size: 54px;
+    }
+
+    @include max600 {
+      font-size: 34px;
+    }
   }
 
   &__buttons {
     margin: 40px 0;
+
+    @include max991 {
+      margin: 20px 0 0 0;
+    }
   }
 
   &__address {
+    @include max991 {
+      display: none;
+    }
   }
 
   &__right {
@@ -47,24 +101,31 @@
     align-items: flex-start;
     height: 100%;
     picture{
+      transition: 0.3s;
       display: flex;
       align-items: flex-start;
       height: 100%;
+      width: 100%;
       img{
         width: 100%;
         height: 100%;
       }
     }
+
+    @include max991 {
+      border-radius: 12px;
+    }
+
   }
 }
 
 .arrow-card {
   position: relative;
+  overflow: hidden;
 
   &__inner {
     background: #FFB21C;
     border-radius: 70px 12px 12px 12px;
-    overflow: hidden;
   }
 
   &__body {
@@ -72,6 +133,10 @@
     background: var(--ui-dark, #2C2F31);
     position: relative;
     z-index: 2;
+
+    @include max991 {
+      border-radius: 12px 12px 147px 12px;
+    }
   }
 
   &__animate {
@@ -83,16 +148,26 @@
 .buttons-banner {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-
+  gap: 10px;
+  @include max991 {
+    gap: 5px;
+  }
   &__item {
     flex-grow: 1;
     width: calc(50% - 20px);
+
+    @include max991 {
+      width: auto;
+      flex-grow: 0;
+    }
   }
 
   &__link {
     display: inline-flex;
     width: 100%;
+    @include max991 {
+      padding: 8px 15px;
+    }
   }
 }
 .btn {
@@ -109,6 +184,7 @@
 }
 .btn--justify {
   justify-content: space-between;
+  gap: 5px;
 }
 .address {
 
@@ -127,11 +203,19 @@
   }
 }
 .animate-arrow {
-  display: flex;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  &__inner{
+    display: flex;
+    transition: 0.3s;
+    transform: translateX(-55px);
+  }
 
   &__icon {
     width: 55px;
     height: 55px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;

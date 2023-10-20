@@ -25,18 +25,6 @@
     gap: 10px;
   }
 
-  &--white{
-    background: var(--ui-white, #FFF);
-    @media screen and (min-width: 1024px) {
-      &:hover{
-        background: var(--ui-accent, #FFB21C);
-        svg{
-          fill: var(--ui-dark, #2C2F31);
-        }
-      }
-    }
-  }
-
   &--border-transparent {
     border: 1px solid var(--ui-accent-medium-contrast, rgba(255, 178, 28, 0.60));
     color: var(--typography-white, #FFF);
@@ -47,6 +35,19 @@
       background: var(--ui-accent, #FFB21C);
       color: var(--typography-black, #0D0D0D);
     }
+    }
+  }
+
+  &--white{
+    background: var(--ui-white, #FFF);
+    color: var(--typography-black, #0D0D0D);
+    @media screen and (min-width: 1024px) {
+      &:hover{
+        background: var(--ui-accent, #FFB21C);
+        svg{
+          fill: var(--ui-dark, #2C2F31);
+        }
+      }
     }
   }
 }

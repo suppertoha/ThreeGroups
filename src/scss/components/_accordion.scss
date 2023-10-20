@@ -1,0 +1,125 @@
+.accordion-start-js {
+  transition: 0.3s;
+    cursor: pointer;
+
+  &.open svg {
+    transform: rotate(0deg);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill:  #0D0D0D;
+    transition: 0.3s;
+    transform: rotate(-45deg);
+  }
+
+}
+
+.accordion-content-js {
+  position: relative;
+  z-index: 1;
+  color: #1e1e1e;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  box-sizing: content-box;
+  transition: max-height 0.8s ease;
+
+  &.open {
+    max-height: inherit;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+    padding-top: 20px;
+  }
+}
+
+
+.js-text__more-button {
+  margin-top: 10px;
+  border: none;
+  transition: 0.3s;
+  background: transparent;
+  color: var(--unnamed, #E85022);
+  border-bottom: 1px solid ;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  @include min1024 {
+    &:hover{
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+.accordion{
+  &__text{
+    color: var(--typography-black, #0D0D0D);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    p{
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__item{
+    border-radius: 12px;
+    background: var(--ui-white, #FFF);
+    padding: 35px 40px;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+.header-accordion{
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__block{
+    color: var(--typography-black, #0D0D0D);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110.023%;
+    text-transform: uppercase;
+  }
+
+  &__arrow{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--ui-accent, #FFB21C);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.questions{
+  margin-top: 120px;
+}
+
+.title-h2{
+  color: var(--typography-black, #0D0D0D);
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 105%;
+  margin-bottom: 60px;
+}

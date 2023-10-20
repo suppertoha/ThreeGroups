@@ -10,6 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -143,6 +146,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+
+/***/ }),
+
+/***/ "./src/js/components/accordion.js":
+/*!****************************************!*\
+  !*** ./src/js/components/accordion.js ***!
+  \****************************************/
+/***/ (() => {
+
+document.querySelectorAll(".accordion-start-js").forEach(el => {
+  el.addEventListener("click", () => {
+    const elems = document.querySelectorAll(".accordion-start-js");
+    elems.forEach(elem => {
+      if (elem !== el) {
+        elem.classList.remove("open");
+        elem.nextElementSibling.classList.remove("open");
+      }
+    });
+    el.classList.toggle("open");
+    let content = el.nextElementSibling;
+    if (content.classList.contains("open")) {
+      document.querySelectorAll(".accordion-content-js").forEach(el => {
+        if (content && content.classList.contains("open")) {
+          content.classList.remove("open");
+        }
+      });
+    } else {
+      document.querySelectorAll(".accordion-content-js").forEach(el => {
+        if (content && !content.classList.contains("open")) {
+          content.classList.add("open");
+        }
+      });
+    }
+  });
+});
 
 /***/ }),
 
