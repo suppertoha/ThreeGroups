@@ -189,3 +189,23 @@
     }
   }
 }
+
+.title-h2{
+  color: var(--typography-black, #0D0D0D);
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 105%;
+  margin-bottom: 60px;
+}
+
+.title-h3 {
+  color: var(--typography-black, #0D0D0D);
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110.023%; 
+  text-transform: uppercase;
+}
