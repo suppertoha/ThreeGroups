@@ -1,5 +1,4 @@
 .banner-block {
-
   &__inner {
     display: flex;
     gap: 20px;
@@ -8,9 +7,6 @@
       &:hover{
         .banner-block__images picture{
           scale: 1.05;
-        }
-        .animate-arrow__inner{
-          transform: translateX(0px);
         }
       }
     }
@@ -119,6 +115,16 @@
   }
 }
 
+.anime-arrow-hover{
+  @media screen and (min-width: 1024px) {
+    &:hover{
+      .animate-arrow__inner{
+        transform: translateX(0px);
+      }
+    }
+  }
+}
+
 .arrow-card {
   position: relative;
   overflow: hidden;
@@ -160,6 +166,15 @@
       width: auto;
       flex-grow: 0;
     }
+
+    @include max600 {
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -168,6 +183,7 @@
     @include max991 {
       padding: 8px 15px;
     }
+
   }
 }
 .btn {
@@ -175,6 +191,15 @@
 .link-info {
 
   &__name {
+    @include max768 {
+      >span{
+        display: none;
+      }
+
+      &:before{
+        content: attr(data-text);
+      }
+    }
   }
 
   &__date {

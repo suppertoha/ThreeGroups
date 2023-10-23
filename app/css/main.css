@@ -1150,11 +1150,6 @@ a:hover {
   .banner-block__inner:hover .banner-block__images picture {
     scale: 1.05;
   }
-  .banner-block__inner:hover .animate-arrow__inner {
-    -webkit-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    transform: translateX(0px);
-  }
 }
 @media (max-width: 991px) {
   .banner-block__inner {
@@ -1274,6 +1269,14 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .anime-arrow-hover:hover .animate-arrow__inner {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
 .arrow-card {
   position: relative;
   overflow: hidden;
@@ -1326,6 +1329,11 @@ a:hover {
     flex-grow: 0;
   }
 }
+@media (max-width: 600px) {
+  .buttons-banner__item:nth-child(4), .buttons-banner__item:nth-child(5), .buttons-banner__item:nth-child(6), .buttons-banner__item:nth-child(7) {
+    display: none;
+  }
+}
 .buttons-banner__link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1338,6 +1346,14 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .link-info__name > span {
+    display: none;
+  }
+  .link-info__name:before {
+    content: attr(data-text);
+  }
+}
 .btn--justify {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
