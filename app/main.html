@@ -104,7 +104,7 @@
             <div class="header-top__social social">
               <ul class="social__inner">
                 <li class="social__item">
-                  <a href="#" class="social__link">
+                  <a target="_blank" href="https://vk.com/" class="social__link">
                     <svg class="social__icon">
                       <use xlink:href="img/sprite.svg#vk"></use>
                     </svg>
@@ -112,7 +112,7 @@
                 </li>
 
                 <li class="social__item">
-                  <a href="#" class="social__link">
+                  <a target="_blank" href="https://telegram.org/" class="social__link">
                     <svg class="social__icon">
                       <use xlink:href="img/sprite.svg#tg"></use>
                     </svg>
@@ -120,7 +120,7 @@
                 </li>
 
                 <li class="social__item">
-                  <a href="#" class="social__link">
+                  <a target="_blank" href="https://ok.ru/" class="social__link">
                     <svg class="social__icon">
                       <use xlink:href="img/sprite.svg#ok"></use>
                     </svg>
@@ -172,7 +172,7 @@
         <div class="header-bottom__social social">
           <ul class="social__inner">
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a target="_blank" href="https://vk.com/"  class="social__link">
                 <svg class="social__icon">
                   <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
@@ -180,7 +180,7 @@
             </li>
 
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a target="_blank" href="https://telegram.org/" class="social__link">
                 <svg class="social__icon">
                   <use xlink:href="img/sprite.svg#tg"></use>
                 </svg>
@@ -188,7 +188,7 @@
             </li>
 
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a target="_blank" href="https://ok.ru/" class="social__link">
                 <svg class="social__icon">
                   <use xlink:href="img/sprite.svg#ok"></use>
                 </svg>
@@ -216,7 +216,7 @@
                   <div class="banner-block__container">
                     <div class="banner-block__name">Lumen</div>
                     <ul class="banner-block__buttons buttons-banner">
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Курск
                         </span>
@@ -225,7 +225,7 @@
                         </div>
                       </a>
                       </li>
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Саратов
                         </span>
@@ -234,7 +234,7 @@
                         </div>
                       </a>
                       </li>
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Омск
                         </span>
@@ -243,7 +243,7 @@
                         </div>
                       </a>
                       </li>
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Ульяновск
                         </span>
@@ -252,7 +252,7 @@
                         </div>
                       </a>
                       </li>
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Тольятти
                         </span>
@@ -261,7 +261,7 @@
                         </div>
                       </a>
                       </li>
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Краснодар
                         </span>
@@ -270,7 +270,7 @@
                         </div>
                       </a>
                       </li>
-                      <li class="buttons-banner__item">
+                      <li class="buttons-banner__item item-hidden">
                         <a href="#" class="buttons-banner__link btn link-info btn--border-transparent btn--justify"> <span class="link-info__name">
                           Железногорск
                         </span>
@@ -279,6 +279,7 @@
                         </div>
                       </a>
                       </li>
+                      <!-- всем buttons-banner__item кроме этой кнопки заданы доп классы item-hidden по этому классу скрываются элементы через css  -->
                       <li class="buttons-banner__item">
                         <a href="#" class="buttons-banner__link btn btn--white link-info btn--justify"> <span class="link-info__name" data-text = "Еще 4">
                           <span>
@@ -321,9 +322,8 @@
                   <source srcset="img/banner-img-600.webp" type="image/webp" media="(max-width: 600px)" width="345" height="431" alt="img">
                   <source srcset="img/banner-img-1024.webp" type="image/webp" media="(max-width: 1024px)" width="708" height="431" alt="img">
                   <source srcset="img/banner-img.webp" type="image/webp">
-                  <img loading="lazy" src="banner-img.jpg" class="image" width="826" height="476" alt="img">
+                  <img src="banner-img.jpg" class="image" width="826" height="476" alt="img">
                 </picture>
-
               </div>
 
               <div class="banner-block__calendar calensar-banner">
@@ -349,7 +349,7 @@
         <div class="container">
           <div class="concerts-cards__title title-h2">
             <div class="title-h2__block">
-              <div class="title-h2__text">Ближайшие концерты</div>
+              <div class="title-h2__text">Ближайшие <span>концерты</span></div>
               <a href="#" class="title-h2__link btn btn--white">Смотреть все</a>
             </div>
           </div>
@@ -359,7 +359,7 @@
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Мельница</div>
                   <ul class="card-concert__buttons buttons-banner">
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Курск
                       </span>
@@ -368,7 +368,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Ульяновск
                       </span>
@@ -377,7 +377,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Тольятти
                       </span>
@@ -386,7 +386,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Краснодар
                       </span>
@@ -395,7 +395,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Железногорск
                       </span>
@@ -404,7 +404,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Омск
                       </span>
@@ -413,7 +413,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Саратов
                       </span>
@@ -438,11 +438,11 @@
                     </picture>
                   </div>
 
-                  <div class="card-concert__button">
+                  <div class="card-concert__button button-card">
                     <span>
                       Подробнее
                     </span>
-                    <div class="card-concert__animate animate-arrow">
+                    <div class="button-card__animate animate-arrow">
                       <ul class="animate-arrow__inner">
                         <li class="animate-arrow__icon">
                           <svg class="arow">
@@ -467,7 +467,7 @@
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">THE HATTERS</div>
                   <ul class="card-concert__buttons buttons-banner">
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Курск
                       </span>
@@ -476,7 +476,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Ульяновск
                       </span>
@@ -485,7 +485,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Тольятти
                       </span>
@@ -494,7 +494,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Краснодар
                       </span>
@@ -503,7 +503,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Железногорск
                       </span>
@@ -512,7 +512,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Омск
                       </span>
@@ -521,7 +521,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Саратов
                       </span>
@@ -546,11 +546,11 @@
                     </picture>
                   </div>
 
-                  <div class="card-concert__button">
+                  <div class="card-concert__button button-card">
                     <span>
                       Подробнее
                     </span>
-                    <div class="card-concert__animate animate-arrow">
+                    <div class="button-card__animate animate-arrow">
                       <ul class="animate-arrow__inner">
                         <li class="animate-arrow__icon">
                           <svg class="arow">
@@ -575,7 +575,7 @@
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Стас Старовойтов</div>
                   <ul class="card-concert__buttons buttons-banner">
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Курск
                       </span>
@@ -584,7 +584,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Ульяновск
                       </span>
@@ -593,7 +593,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Тольятти
                       </span>
@@ -602,7 +602,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Краснодар
                       </span>
@@ -611,7 +611,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Железногорск
                       </span>
@@ -620,7 +620,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Омск
                       </span>
@@ -629,7 +629,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Саратов
                       </span>
@@ -654,11 +654,11 @@
                     </picture>
                   </div>
 
-                  <div class="card-concert__button">
+                  <div class="card-concert__button button-card">
                     <span>
                       Подробнее
                     </span>
-                    <div class="card-concert__animate animate-arrow">
+                    <div class="button-card__animate animate-arrow">
                       <ul class="animate-arrow__inner">
                         <li class="animate-arrow__icon">
                           <svg class="arow">
@@ -683,7 +683,7 @@
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">ZIVERT</div>
                   <ul class="card-concert__buttons buttons-banner">
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Курск
                       </span>
@@ -692,7 +692,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Ульяновск
                       </span>
@@ -701,7 +701,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Тольятти
                       </span>
@@ -710,7 +710,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Краснодар
                       </span>
@@ -719,7 +719,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Железногорск
                       </span>
@@ -728,7 +728,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Омск
                       </span>
@@ -737,7 +737,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Саратов
                       </span>
@@ -762,11 +762,11 @@
                     </picture>
                   </div>
 
-                  <div class="card-concert__button">
+                  <div class="card-concert__button button-card">
                     <span>
                       Подробнее
                     </span>
-                    <div class="card-concert__animate animate-arrow">
+                    <div class="button-card__animate animate-arrow">
                       <ul class="animate-arrow__inner">
                         <li class="animate-arrow__icon">
                           <svg class="arow">
@@ -791,7 +791,7 @@
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Группа княzz, Юбилейный концерт</div>
                   <ul class="card-concert__buttons buttons-banner">
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Курск
                       </span>
@@ -800,7 +800,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Ульяновск
                       </span>
@@ -809,7 +809,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Тольятти
                       </span>
@@ -818,7 +818,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Краснодар
                       </span>
@@ -827,7 +827,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Железногорск
                       </span>
@@ -836,7 +836,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Омск
                       </span>
@@ -845,7 +845,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Саратов
                       </span>
@@ -870,11 +870,11 @@
                     </picture>
                   </div>
 
-                  <div class="card-concert__button">
+                  <div class="card-concert__button button-card">
                     <span>
                       Подробнее
                     </span>
-                    <div class="card-concert__animate animate-arrow">
+                    <div class="button-card__animate animate-arrow">
                       <ul class="animate-arrow__inner">
                         <li class="animate-arrow__icon">
                           <svg class="arow">
@@ -899,7 +899,7 @@
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Ария</div>
                   <ul class="card-concert__buttons buttons-banner">
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Курск
                       </span>
@@ -908,7 +908,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Ульяновск
                       </span>
@@ -917,7 +917,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Тольятти
                       </span>
@@ -926,7 +926,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Краснодар
                       </span>
@@ -935,7 +935,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Железногорск
                       </span>
@@ -944,7 +944,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Омск
                       </span>
@@ -953,7 +953,7 @@
                       </div>
                     </a>
                     </li>
-                    <li class="buttons-banner__item">
+                    <li class="buttons-banner__item item-hidden">
                       <a href="#" class="buttons-banner__link btn link-info btn--grey"> <span class="link-info__name">
                         Саратов
                       </span>
@@ -978,11 +978,11 @@
                     </picture>
                   </div>
 
-                  <div class="card-concert__button">
+                  <div class="card-concert__button button-card">
                     <span>
                       Подробнее
                     </span>
-                    <div class="card-concert__animate animate-arrow">
+                    <div class="button-card__animate animate-arrow">
                       <ul class="animate-arrow__inner">
                         <li class="animate-arrow__icon">
                           <svg class="arow">
@@ -1008,6 +1008,105 @@
       </div>
       <!-- End concerts-cards -->
 
+      <!-- actions -->
+      <div class="actions block-margin">
+        <div class="container">
+          <div class="actions__title title-h2">
+            <div class="title-h2__block">
+              <div class="title-h2__text">Акции <span>и розыгрыши</span></div>
+              <a href="#" class="title-h2__link btn btn--white">Смотреть все</a>
+            </div>
+          </div>
+
+          <div class="actions__inner">
+            <div class="actions__cards cards-action">
+              <ul class="cards-action__inner">
+                <li class="cards-action__item">
+                  <a href="#" class="cards-action__link anime-arrow-hover">
+                    <div class="cards-action__content">
+                      <div class="cards-action__name title-h3">THE HATTERS</div>
+                      <div class="cards-action__info"> <p>Ульяновск, ДК Губернаторский</p> <p>23 Фев 2023 16:00 ПТ</p> </div>
+                      <div class="cards-action__block">
+                        <div class="cards-action__text">Розыгрыш билетов</div>
+                        <div class="cards-action__animate animate-arrow">
+                          <ul class="animate-arrow__inner">
+                            <li class="animate-arrow__icon">
+                              <svg class="arow">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </li>
+                            <li class="animate-arrow__icon">
+                              <svg class="arow">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards-action__images animate-img">
+                      <picture>
+                        <source srcset="img/cards-action-1.webp" type="image/webp">
+                        <img loading="lazy" src="img/cards-action-1.jpg" class="image" width="165" height="110" alt="img">
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="actions__banner banner-action">
+              <div class="banner-action__inner">
+                <div class="banner-action__content">
+                  <div class="banner-action__title title-h2">Мы в социальных сетях</div>
+                  <div class="banner-action__subtitle">Подписывайся на нас </div>
+
+                  <div class="actions__social social">
+                    <ul class="social__inner">
+                      <li class="social__item">
+                        <a target="_blank" href="https://vk.com/"  class="social__link">
+                          <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="social__item">
+                        <a target="_blank" href="https://telegram.org/" class="social__link">
+                          <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                          </svg>
+                        </a>
+                      </li>
+
+                      <li class="social__item">
+                        <a target="_blank" href="https://ok.ru/" class="social__link">
+                          <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#ok"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="banner-action__images">
+                <picture>
+                  <source srcset="img/.webp" type="image/banner-img600.webp" media="(max-width: 600px)" width="338" height="355" alt="img">
+                  <source srcset="img/.webp" type="image/banner-img1024.webp" media="(max-width: 1024px)" width="741" height="420" alt="img">
+                  <source srcset="img/.webp" type="image/banner-img.webp">
+                  <img loading="lazy" src="img/banner-img.png" class="image" width="966" height="380" alt="img">
+                </picture>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End actions -->
+
     </main>
     <footer class="footer">
   <div class="container">
@@ -1017,10 +1116,11 @@
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </a>
+
       <div class="footer-top__social social">
         <ul class="social__inner">
           <li class="social__item">
-            <a href="#" class="social__link">
+            <a target="_blank" href="https://vk.com/"  class="social__link">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
@@ -1028,7 +1128,7 @@
           </li>
 
           <li class="social__item">
-            <a href="#" class="social__link">
+            <a target="_blank" href="https://telegram.org/" class="social__link">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#tg"></use>
               </svg>
@@ -1036,7 +1136,7 @@
           </li>
 
           <li class="social__item">
-            <a href="#" class="social__link">
+            <a target="_blank" href="https://ok.ru/" class="social__link">
               <svg class="social__icon">
                 <use xlink:href="img/sprite.svg#ok"></use>
               </svg>
@@ -1044,6 +1144,7 @@
           </li>
         </ul>
       </div>
+
       <button class="footer-top__button btn btn-reset btn--border-transparent">Напишите нам</button>
     </div>
     <div class="footer-center">

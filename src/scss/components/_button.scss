@@ -82,6 +82,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      align-self: flex-end;
     }
   }
 }
@@ -127,4 +128,55 @@
   }
 }
 
+.location-btn{
+  align-items: center;
+}
+
+.button-card{
+  position: absolute;
+  overflow: hidden;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(20px);
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  font-family: Inter;
+
+  span{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    padding: 10px 67px 10px 15px;
+
+    @include max600 {
+      font-size: 14px;
+      padding: 8px 60px 8px 15px;
+    }
+  }
+
+  &__animate {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    bottom: 0;
+    background: var(--ui-accent, #FFB21C);
+  }
+
+  @include max600 {
+    .animate-arrow{
+      width: 45px;
+      .animate-arrow__icon {
+        width: 50px;
+        .arow {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+}
 
