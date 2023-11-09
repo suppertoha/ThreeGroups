@@ -15,6 +15,10 @@
   line-height: 140%;
   transition: 0.3s;
 
+  @include max600 {
+    font-size: 14px;
+  }
+
   &--yellow{
     background: var(--ui-accent, #FFB21C);
     @media screen and (min-width: 1024px) {

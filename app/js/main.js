@@ -12,6 +12,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_show_more_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/show-more-menu */ "./src/js/components/show-more-menu.js");
+/* harmony import */ var _components_show_more_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_show_more_menu__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_blockHeightOfTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/blockHeightOfTitle */ "./src/js/components/blockHeightOfTitle.js");
+/* harmony import */ var _components_blockHeightOfTitle__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_blockHeightOfTitle__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_goBack__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/goBack */ "./src/js/components/goBack.js");
+/* harmony import */ var _components_goBack__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_goBack__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
 
 
@@ -184,6 +193,146 @@ document.querySelectorAll(".accordion-start-js").forEach(el => {
 
 /***/ }),
 
+/***/ "./src/js/components/blockHeightOfTitle.js":
+/*!*************************************************!*\
+  !*** ./src/js/components/blockHeightOfTitle.js ***!
+  \*************************************************/
+/***/ (() => {
+
+function hideExcessButtons() {
+  function updateButtons() {
+    const cardContents = document.querySelectorAll('.card-concert__content');
+    cardContents.forEach(content => {
+      const containerHeight = content.offsetHeight;
+      const title = content.querySelector('.card-concert__title');
+      const buttons = content.querySelectorAll('.buttons-banner__item');
+      const titleHeight = title.offsetHeight;
+      const buttonsBannerHeight = content.querySelector('.buttons-banner').offsetHeight;
+      let currentHeight = titleHeight;
+      let excessButtons = 0;
+      let itemMoreButtonHeight = 0;
+      const itemMoreButtonsContainer = content.querySelector('.item-more__buttons');
+      const itemMoreButton = content.querySelector('.item-more');
+      const itemMoreNum = content.querySelector('.item-more__num');
+      buttons.forEach(button => {
+        if (button.classList.contains('item-more')) {
+          itemMoreButtonHeight = button.offsetHeight;
+          button.addEventListener('click', () => {
+            const itemMoreInner = content.querySelector('.item-more__inner');
+            itemMoreInner.classList.toggle('active');
+            checkItemMoreInner(itemMoreInner);
+          });
+          const itemMoreClose = button.querySelector('.item-more__close');
+          itemMoreClose.addEventListener('click', event => {
+            event.stopPropagation();
+            const itemMoreInner = content.querySelector('.item-more__inner');
+            itemMoreInner.classList.remove('active');
+            checkItemMoreInner(itemMoreInner);
+          });
+          return;
+        }
+        currentHeight += button.offsetHeight;
+        if (currentHeight > containerHeight - itemMoreButtonHeight) {
+          button.classList.add('hidden-button');
+          excessButtons++;
+          itemMoreButtonsContainer.appendChild(button);
+        }
+      });
+      if (excessButtons > 0) {
+        itemMoreButton.classList.remove('hidden-button');
+        itemMoreNum.textContent = excessButtons;
+      } else {
+        itemMoreButton.classList.add('hidden-button');
+      }
+      function checkItemMoreInner(itemMoreInner) {
+        const isEmpty = !itemMoreInner.querySelector('*');
+        if (isEmpty && excessButtons === 0) {
+          itemMoreButton.classList.add('hidden-button');
+        } else {
+          itemMoreButton.classList.remove('hidden-button');
+        }
+      }
+    });
+  }
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
+}
+hideExcessButtons();
+
+//function hideExcessButtons() {
+//  function updateButtons() {
+//    const cardContents = document.querySelectorAll('.card-concert__content');
+
+//    cardContents.forEach(content => {
+//      const containerHeight = content.offsetHeight;
+//      const title = content.querySelector('.card-concert__title');
+//      const buttons = content.querySelectorAll('.buttons-banner__item');
+//      const titleHeight = title.offsetHeight;
+//      const buttonsBanner = content.querySelector('.buttons-banner');
+//      const buttonsBannerHeight = buttonsBanner.offsetHeight;
+//      const itemMoreButton = content.querySelector('.item-more');
+//      const itemMoreNum = content.querySelector('.item-more__num');
+
+//      let currentHeight = titleHeight;
+//      let excessButtons = 0;
+//      let itemMoreButtonHeight = 0;
+//      const itemMoreButtonsContainer = content.querySelector('.item-more__buttons');
+
+//      buttons.forEach(button => {
+//        if (button.classList.contains('item-more')) {
+//          itemMoreButtonHeight = button.offsetHeight;
+//          button.addEventListener('click', () => {
+//            const itemMoreInner = content.querySelector('.item-more__inner');
+//            itemMoreInner.classList.toggle('active');
+//            checkItemMoreInner(itemMoreInner);
+//          });
+
+//          const itemMoreClose = button.querySelector('.item-more__close');
+//          itemMoreClose.addEventListener('click', (event) => {
+//            event.stopPropagation();
+//            const itemMoreInner = content.querySelector('.item-more__inner');
+//            itemMoreInner.classList.remove('active');
+//            checkItemMoreInner(itemMoreInner);
+//          });
+
+//          return;
+//        }
+
+//        currentHeight += button.offsetHeight;
+//        console.log(buttonsBannerHeight)
+//        if (buttonsBannerHeight > 0) {
+//          button.classList.add('hidden-button');
+//          excessButtons++;
+//          itemMoreButtonsContainer.appendChild(button);
+//        }
+//      });
+
+//      if (excessButtons > 0) {
+//        itemMoreButton.classList.remove('hidden-button');
+//        itemMoreNum.textContent = excessButtons;
+//      } else {
+//        itemMoreButton.classList.add('hidden-button');
+//      }
+
+//      function checkItemMoreInner(itemMoreInner) {
+//        const isEmpty = !itemMoreInner.querySelector('*');
+//        if (isEmpty && excessButtons === 0) {
+//          itemMoreButton.classList.add('hidden-button');
+//        } else {
+//          itemMoreButton.classList.remove('hidden-button');
+//        }
+//      }
+//    });
+//  }
+
+//  window.addEventListener('resize', updateButtons);
+//  updateButtons();
+//}
+
+//hideExcessButtons();
+
+/***/ }),
+
 /***/ "./src/js/components/burger.js":
 /*!*************************************!*\
   !*** ./src/js/components/burger.js ***!
@@ -195,6 +344,81 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/burger */ "./src/js/functions/burger.js");
 // Реализация бургер-меню
 
+
+/***/ }),
+
+/***/ "./src/js/components/goBack.js":
+/*!*************************************!*\
+  !*** ./src/js/components/goBack.js ***!
+  \*************************************/
+/***/ (() => {
+
+document.querySelectorAll('.go-back').forEach(function (button) {
+  button.addEventListener('click', function () {
+    window.history.back();
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/show-more-menu.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/show-more-menu.js ***!
+  \*********************************************/
+/***/ (() => {
+
+const vLinks = document.querySelector('.visible-links');
+const hLinks = document.querySelector('.hidden-links');
+const btn = document.querySelector('.nav-text');
+const breaks = [];
+const updateNav = () => {
+  const nav = document.querySelector('.header-top__body');
+  const availableSpace = btn && btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - (btn && btn.offsetWidth) - 0;
+  if (vLinks && hLinks && btn && nav) {
+    if (vLinks.offsetWidth > availableSpace) {
+      breaks.push(vLinks.offsetWidth);
+      hLinks.insertBefore(vLinks.lastElementChild, hLinks.firstElementChild);
+      if (btn.classList.contains('hidden') && hLinks.children.length > 0) {
+        btn.classList.remove('hidden');
+      }
+    } else {
+      if (availableSpace > breaks[breaks.length - 1]) {
+        vLinks.appendChild(hLinks.firstElementChild);
+        breaks.pop();
+      }
+      if (breaks.length < 1) {
+        btn.classList.add('hidden');
+        hLinks.classList.add('hidden');
+      }
+    }
+    btn.setAttribute('count', breaks.length);
+    if (hLinks.children.length > 0) {
+      btn.textContent = 'Еще';
+      btn.classList.add('active');
+    } else {
+      btn.textContent = '';
+      btn.classList.remove('active');
+    }
+  }
+};
+const toggleHiddenLinks = () => {
+  if (hLinks) {
+    hLinks.classList.toggle('hidden');
+  }
+};
+if (btn) {
+  btn.addEventListener('click', toggleHiddenLinks);
+  document.addEventListener('click', event => {
+    if (!btn.contains(event.target) && hLinks) {
+      hLinks.classList.add('hidden');
+    }
+  });
+}
+if (window) {
+  window.addEventListener('resize', updateNav);
+  window.addEventListener('DOMContentLoaded', updateNav);
+  window.addEventListener('load', updateNav);
+}
 
 /***/ }),
 

@@ -29,16 +29,6 @@
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px 34px;
-    margin-right: 20px;
-
-    @include max1366 {
-      gap: 10px 20px;
-    }
-
 
     &--mobile{
       display: block;
@@ -58,7 +48,8 @@
   &__link {
     color: var(--typography-black-medium-contrast, rgba(13, 13, 13, 0.60));
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
+    white-space: nowrap;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
@@ -203,6 +194,7 @@
     display: none;
     background: #0D0D0D;
     position: fixed;
+    z-index: 100;
     left: 0;
     right: 0;
     top: 0;

@@ -84,14 +84,15 @@
 
     @include max1366 {
       max-width: 860px;
+      gap: 20px 20px;
     }
 
     @media screen and (max-width: 1150px) {
       order: 3
     }
 
-    @include max768 {
-      gap: 20px 17px;
+    @include max600 {
+      gap: 10px 20px;
     }
   }
 
@@ -108,7 +109,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    font-size: 16px;
+    font-size: 14px;
     transition: 0.3s;
 
     @media screen and (min-width: 1024px) {
