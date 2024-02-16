@@ -5,6 +5,8 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/general";
+
 @import "./components/button";
 @import "./components/main";
 @import "./components/working";

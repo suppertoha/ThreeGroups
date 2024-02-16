@@ -1,8 +1,8 @@
+
 .banner-block {
   &__inner {
     display: flex;
     gap: 20px;
-
     @media screen and (min-width: 1024px) {
       &:hover{
         .animate-img picture{
@@ -20,13 +20,16 @@
     }
   }
 
-  &__card-arrow {
-    max-width: 584px;
+  &__elem {
+    background: var(--ui-dark, #2C2F31);
+    min-width: 584px;
+  }
 
+  &__contain {
+    max-width: 584px;
     @include max1366 {
       max-width: 508px;
     }
-
     @include max991 {
       max-width: 100%;
     }
@@ -34,7 +37,7 @@
 
   &__calendar{
     position: absolute;
-    bottom: 30px;
+    bottom: 34px;
     left: 30px;
     min-width: 305px;
 
@@ -44,8 +47,8 @@
   }
 
   &__container {
-    padding: 60px;
-
+    padding: 50px 60px;
+    height: 100%;
     @include max991 {
       padding: 40px;
     }
@@ -82,7 +85,7 @@
   }
 
   &__buttons {
-    margin: 40px 0;
+    margin: 43px 0;
 
     @include max991 {
       margin: 20px 0 0 0;
@@ -99,222 +102,24 @@
     position: relative;
   }
 
+
+
   &__images {
     border-radius: 12px 12px 70px 12px;
     overflow: hidden;
     display: flex;
     align-items: flex-start;
     height: 100%;
-
-
     @include max991 {
       border-radius: 12px;
     }
-
   }
 }
 
-.anime-arrow-hover{
-  @media screen and (min-width: 1024px) {
-    &:hover{
-      .animate-arrow__inner{
-        transform: translateX(0px);
-      }
-    }
-  }
-}
-
-.arrow-card {
-  position: relative;
-  overflow: hidden;
-
-  &__inner {
-    background: #FFB21C;
-    border-radius: 70px 12px 12px 12px;
-  }
-
-  &__body {
-    border-radius: 70px 12px 147px 12px;
-    background: var(--ui-dark, #2C2F31);
-    position: relative;
-    z-index: 2;
-
-    @include max991 {
-      border-radius: 12px 12px 147px 12px;
-    }
-  }
-
-  &__animate {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-}
-.buttons-banner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  @include max991 {
-    gap: 5px;
-  }
-  &__item {
-    flex-grow: 1;
-    width: calc(50% - 20px);
-
-    @include max991 {
-      width: auto;
-      flex-grow: 0;
-    }
-
-  }
-
-  &__link {
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
-    padding: 6px 15px;
-  }
-}
-.btn {
-}
-.link-info {
-
-  &__name {
-    @include max768 {
-      >span{
-        display: none;
-      }
-
-      &:before{
-        content: attr(data-text);
-      }
-    }
-  }
-
-  &__date {
-    @include max768 {
-      &--mobi{
-        display: none;
-      }
-    }
-  }
-}
-.btn--border-transparent {
-}
-.btn--justify {
-  justify-content: space-between;
-  gap: 5px;
-}
-.address {
 
 
-  &__item {
-    color: var(--typography-white, #FFF);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
 
-    &:not(:last-child){
-      margin-bottom: 5px;
-    }
-  }
-}
-.animate-arrow {
-  width: 55px;
-  height: 55px;
-  overflow: hidden;
-  &__inner{
-    display: flex;
-    transition: 0.3s;
-    transform: translateX(-55px);
-  }
 
-  &__icon {
-    width: 55px;
-    height: 55px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .arow{
-      width: 25px;
-      height: 25px;
-    }
-  }
-}
-.arow {
-}
-.image {
-}
 
-.banner-block {
 
-  &__calendar {
-  }
-}
-
-.calensar-banner {
-
-  &__inner {
-    display: flex;
-  }
-
-  &__img {
-    display: flex;
-    align-items: flex-start;
-    border-radius: 7px 0px 0px 7px;
-    background: var(--ui-accent, #FFB21C);
-    padding: 10px 18px;
-    .img{
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  &__date {
-    border-radius: 0 7px 7px 0;
-    background: rgba(255, 255, 255, 0.70);
-    backdrop-filter: blur(20px);
-    color: var(--typography-black, #0D0D0D);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    padding: 0 15px 0 20px;
-    margin-left: -1px;
-  }
-}
-.img {
-}
-
-.block-margin{
-  margin-bottom: 120px;
-
-  @include max600 {
-    margin-bottom: 80px;
-  }
-}
-
-.animate-img{
-  height: 100%;
-
-  picture{
-    transform: scale3d(1, 1, 1);
-    transition: 0.3s;
-    display: flex;
-    align-items: flex-start;
-    height: 100%;
-    width: 100%;
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
 
