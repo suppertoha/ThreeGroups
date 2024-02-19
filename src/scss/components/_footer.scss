@@ -23,26 +23,6 @@
       fill: #ffffff;
     }
   }
-
-  &__social {
-  }
-
-  &__button {
-  }
-}
-
-.social {
-  &__inner {
-  }
-
-  &__item {
-  }
-
-  &__link {
-  }
-
-  &__icon {
-  }
 }
 
 .footer-center {
@@ -79,12 +59,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px 30px;
+    gap: 10px 30px;
     max-width: 800px;
 
     @include max1366 {
       max-width: 860px;
-      gap: 20px 20px;
+      gap: 10px 20px;
     }
 
     @media screen and (max-width: 1150px) {
@@ -112,6 +92,9 @@
     font-size: 14px;
     transition: 0.3s;
 
+    &--tel{
+      font-size: 15px;
+    }
     @media screen and (min-width: 1024px) {
       &:hover{
         color: #FFB21C;
@@ -131,12 +114,9 @@
     }
   }
 }
-.working {
-  &__item {
-  }
-}
+
 .footer-bottom {
-  padding: 50px 0 20px;
+  padding: 35px 0 20px;
 
   @media screen and (max-width: 1150px) {
     padding: 0px 0 20px;
@@ -197,6 +177,8 @@
     font-weight: 400;
     line-height: normal;
     transition: 0.3s;
+
+
 
     @media screen and (min-width: 1024px) {
       &:hover{

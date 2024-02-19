@@ -23,6 +23,9 @@
 
   &__name {
     width: 39%;
+    @include max1366 {
+      width: 38%;
+    }
   }
 
   &__info {
@@ -43,6 +46,10 @@
 
     p{
       margin: 0;
+    }
+
+    @include max1366 {
+      width: 38%;
     }
   }
 

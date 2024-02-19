@@ -23,6 +23,10 @@
   &__elem {
     background: var(--ui-dark, #2C2F31);
     min-width: 584px;
+
+    @include max1366 {
+      min-width: auto;
+    }
   }
 
   &__contain {
@@ -49,6 +53,11 @@
   &__container {
     padding: 50px 60px;
     height: 100%;
+
+    @include max1366 {
+      padding: 50px;
+    }
+    
     @include max991 {
       padding: 40px;
     }

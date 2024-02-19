@@ -355,7 +355,7 @@
         <div class="container">
           <div class="concerts-cards__title title-h2">
             <div class="title-h2__block">
-              <div class="title-h2__text">Ближайшие <span>концерты</span></div>
+              <h2 class="title-h2__text ">Ближайшие <span>концерты</span></h2>
               <a href="#" class="title-h2__link btn btn--white">Смотреть все</a>
             </div>
           </div>
@@ -1043,7 +1043,7 @@
   <div class="container">
     <div class="actions__title title-h2">
       <div class="title-h2__block">
-        <div class="title-h2__text">Акции <span>и розыгрыши</span></div>
+        <h2 class="title-h2__text ">Акции <span>и розыгрыши</span></h2>
         <a href="#" class="title-h2__link btn btn--white">Смотреть все</a>
       </div>
     </div>
@@ -1055,7 +1055,9 @@
             <a href="#" class="cards-action__link anime-block-hover">
               <div class="cards-action__content">
                 <div class="cards-action__name title-h3">THE HATTERS</div>
-                <div class="cards-action__info"> <p>Ульяновск, ДК Губернаторский</p> <p><strong>23</strong> Фев 2023 16:00 <strong>ПТ</strong></p> </div>
+                <div class="cards-action__info"> <p>Ульяновск, ДК Губернаторский</p>
+                  <time datetime="2023-02-23 16:00"><strong>23</strong> Фев 2023 16:00 <strong>ПТ</strong></time>
+                </div>
                 <div class="cards-action__block">
                   <div class="cards-action__text">Розыгрыш билетов</div>
                   <div class="cards-action__animate animate-arrow">
@@ -1089,7 +1091,9 @@
               <div class="cards-action__content">
                 <div class="cards-action__name title-h3">Группа княzz, <br>
                   Юбилейный концерт</div>
-                  <div class="cards-action__info"> <p>Ульяновск, ДК Губернаторский</p> <p><strong>23</strong> Фев 2023 16:00 <strong>ПТ</strong></p> </div>
+                  <div class="cards-action__info"> <p>Ульяновск, ДК Губернаторский</p>
+                    <time datetime="2023-02-23 16:00"><strong>23</strong> Фев 2023 16:00 <strong>ПТ</strong></time>
+                  </div>
                 <div class="cards-action__block">
                   <div class="cards-action__text">Скидка 15%</div>
                   <div class="cards-action__animate animate-arrow">
@@ -1119,66 +1123,130 @@
           </li>
         </ul>
       </div>
-
-      <!--<div class="actions__banner banner-action">
-        <div class="banner-action__inner">
-          <div class="banner-action__content">
-            <div class="banner-action__title title-h2">Мы в социальных сетях</div>
-            <div class="banner-action__subtitle">Подписывайся на нас </div>
-
-            <div class="actions__social social">
-              <ul class="social__inner">
-                <li class="social__item">
-                  <a target="_blank" href="https://vk.com/"  class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="img/sprite.svg#vk"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="social__item">
-                  <a target="_blank" href="https://telegram.org/" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="img/sprite.svg#tg"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="social__item">
-                  <a target="_blank" href="https://ok.ru/" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="img/sprite.svg#ok"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="banner-action__images">
-          <picture>
-            <source srcset="img/.webp" type="image/banner-img600.webp" media="(max-width: 600px)" width="338" height="355" alt="img">
-            <source srcset="img/.webp" type="image/banner-img1024.webp" media="(max-width: 1024px)" width="741" height="420" alt="img">
-            <source srcset="img/.webp" type="image/banner-img.webp">
-            <img loading="lazy" src="img/banner-img.png" class="image" width="966" height="380" alt="img">
-          </picture>
-        </div>
-
-
-      </div>-->
     </div>
 
   </div>
 </section>
 <!-- End actions -->
 
+      <section class="social-section border-bottom">
+  <div class="container">
+    <div class="social-section__inner">
+      <div class="social-section__content">
+        <h2 class="title-h2">Мы в социальных сетях</h2>
+        <span class="social-section__text">Подписывайся на нас</span>
+        <div class="social">
+          <ul class="list-reset social__inner">
+            <li class="social__item">
+              <a target="_blank" href="https://vk.com/" class="social__link social__link--big">
+                <svg class="social__icon social__icon--big">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a target="_blank" href="https://telegram.org/" class="social__link social__link--big">
+                <svg class="social__icon social__icon--big">
+                  <use xlink:href="img/sprite.svg#tg"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a target="_blank" href="https://ok.ru/" class="social__link social__link--big">
+                <svg class="social__icon social__icon--big">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="social-section__block">
+        <ul class="list-reset social-section__card">
+          <li class="card-social">
+            <div class="card-social__item">
+              <div class="card-social__header">
+                <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
+                <div class="card-social__block">
+                  <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
+                  <time datetime="2023-10-7 8:13">7 окт в 8:13</time>
+                </div>
+              </div>
+              <div class="card-social__content">
+                <p>
+                  Группа Dogstar, бас-гитаристом которой является Киану Ривз, выпустила первый с 2000 года альбом!
+                </p>
+              </div>
+              <img src="img/card-social-1.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+            </div>
+          </li>
+          <li class="card-social">
+            <div class="card-social__item">
+              <div class="card-social__header">
+                <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
+                <div class="card-social__block">
+                  <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
+                  <time datetime="2023-10-9 9:16">9 окт в 9:16</time>
+                </div>
+              </div>
+              <div class="card-social__content">
+                <p>
+                  65 лет назад родился Виталий Дубинин. Поздравляем с днём рождения.
+                </p>
+              </div>
+              <img src="img/card-social-2.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+            </div>
+          </li>
+          <li class="card-social">
+            <div class="card-social__item">
+              <div class="card-social__header">
+                <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
+                <div class="card-social__block">
+                  <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
+                  <time datetime="2023-10-7 12:55">сегодня в 12:52</time>
+                </div>
+              </div>
+              <div class="card-social__content">
+                <p>
+                  Премьера <a target="_blank" href="https://vk.com/numusic2018">NЮ</a> — «Выручай меня»
+                </p>
+                <p>Очередной хит, который займет достойное место в наших плейлистах</p>
+                <p> А мы с нетерпением ждем встречи на живых выступлениях:</p>
+                <p>
+                  <a target="_blank" href="https://vk.com/nu_brn">
+                    <span>
+                      15 октября — Барнаул <br>
+                      24 ноября — Кемерово <br>
+                      25 ноября — Новокузнецк <br>
+                    </span>
+                  </a>
+                </p>
+
+              </div>
+              <img src="img/card-social-3.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
             <!-- legendary-section -->
-      <section class="legendary-section border-bottom">
+      <section class="legendary-section">
         <div class="container">
+          <div class="legendary-section__title title-h2">
+            <div class="title-h2__block">
+              <h2 class="title-h2__text ">Легендарное</h2>
+              <a href="#" class="title-h2__link btn btn--white">Смотреть все</a>
+            </div>
+          </div>
           <div class="legendary-section__inner">
             <a href="#" class="legendary-section__contain block-border anime-block-hover">
-              <div class="legendary-section__elem block-border__items">
+              <div class="legendary-section__elem block-border__items block-border__items--big">
                 <div class="legendary-section__container block-border__item">
                   <picture class="legendary-section__img animate-img">
                     <source srcset="img/legendary1.webp" type="image/webp" >
@@ -1187,10 +1255,11 @@
                   <div class="legendary-section__name">THE HATTERS</div>
 
                   <div class="legendary-section__content basic-card">
-                    <span class="basic-card__info"><strong>Южно-Сахалинск,</strong>Галлерея ХОЛЛ
-                      5 Июн 2022</span>
+                    <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ</span>
                     <span class="basic-card__date">5 Июн 2022</span>
                   </div>
+
+                  <span class="legendary-section__descr text-orange">Концерт завершен</span>
                 </div>
               </div>
               <div class="legendary-section__arrow  animate-arrow animete-block__arrow">
@@ -1223,7 +1292,7 @@
                 </div>
                 <div class="card-basic__content basic-card">
                   <span class="basic-card__info"><strong>Южно-Сахалинск,</strong>Галлерея ХОЛЛ
-                    5 Июн 2022</span>
+                  </span>
                   <span class="basic-card__date">5 Июн 2022</span>
                 </div>
               </a>
@@ -1241,12 +1310,13 @@
                 </div>
                 <div class="card-basic__content basic-card">
                   <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
-                    5 Июн 2022</span>
+                    </span>
                   <span class="basic-card__date"><strong>5</strong> Июн 2022</span>
                 </div>
               </a>
             </div>
           </div>
+          <button class="concerts-cards__button btn btn--big btn--black">Показать еще</button>
         </div>
       </section>
       <!--End legendary-section -->
@@ -1336,10 +1406,10 @@
       </ul>
       <ul class="list-reset footer-center__tel">
         <li class="footer-center__item">
-          <a class="footer-center__link" href="tel:+73852533023">+7 (38-52) 53-30-23</a>
+          <a class="footer-center__link footer-center__link--tel" href="tel:+73852533023">+7 (38-52) 53-30-23</a>
         </li>
         <li class="footer-center__item">
-          <a class="footer-center__link" href="tel:+73852533023">+7 (38-52) 53-30-23</a>
+          <a class="footer-center__link footer-center__link--tel" href="tel:+73852533023">+7 (38-52) 53-30-23</a>
         </li>
       </ul>
     </div>
