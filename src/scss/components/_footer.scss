@@ -12,8 +12,11 @@
   border-bottom: 1px solid #414446;
 
   @include max600 {
-    flex-direction: column;
     padding: 30px 0 50px;
+  }
+
+  @include max400 {
+    padding: 30px 0 15px;
   }
 
   &__logo {
@@ -22,6 +25,34 @@
     svg {
       fill: #ffffff;
     }
+
+    @include max400 {
+      display: none;
+    }
+  }
+}
+
+.footer-menu{
+  display: none;
+  color: var(--ui-white);
+  border-bottom: 1px solid #414446;
+
+  &__button{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+
+    .arrow{
+      width: 12px;
+      height: 12px;
+      fill: var(--ui-white);
+      transform: rotate(0deg);
+    }
+  }
+
+  @include max400 {
+    display: block;
   }
 }
 
@@ -35,6 +66,16 @@
     gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  @include max768 {
+    padding: 50px 0 35px;
+  }
+
+  @include max400 {
+    justify-content: space-between;
+    padding: 20px 0 20px;
+    border-bottom: 1px solid #414446;
   }
 
   &__working {
@@ -62,6 +103,8 @@
     gap: 10px 30px;
     max-width: 800px;
 
+
+
     @include max1366 {
       max-width: 860px;
       gap: 10px 20px;
@@ -71,9 +114,38 @@
       order: 3
     }
 
+    @include max768 {
+      gap: 10px 25px;
+    }
+
     @include max600 {
       gap: 10px 20px;
     }
+
+    @include max400 {
+      &--pc{
+        display: none;
+      }
+    }
+
+    &--mobile{
+      justify-content: flex-start;
+      .footer-center__item{
+
+        &:not(:last-child){
+          margin-bottom: 0px;
+        }
+      }
+
+      &.accordion-content-js.open{
+        padding: 0 0 10px 0;
+      }
+
+      @include max400 {
+        gap: 10px;
+      }
+    }
+
   }
 
   &__item {
@@ -119,7 +191,7 @@
   padding: 35px 0 20px;
 
   @media screen and (max-width: 1150px) {
-    padding: 0px 0 20px;
+    padding: 20px 0 20px;
   }
 
   &__items {
@@ -131,6 +203,10 @@
 
     @media screen and (max-width: 1150px) {
       gap: 20px;
+    }
+
+    @include max768 {
+      gap: 15px;
     }
   }
 
@@ -177,13 +253,16 @@
     font-weight: 400;
     line-height: normal;
     transition: 0.3s;
-
-
-
     @media screen and (min-width: 1024px) {
       &:hover{
         color: #ffffff;
       }
     }
+
+    @include max400 {
+      font-size: 12px;
+    }
   }
 }
+
+

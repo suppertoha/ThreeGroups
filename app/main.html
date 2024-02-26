@@ -360,7 +360,7 @@
             </div>
           </div>
           <ul class="list-reset concerts-cards__inner">
-            <li class="concerts-cards__item card-concert">
+            <li class="concerts-cards__item card-concert visible">
               <div class="card-concert__inner">
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Мельница</div>
@@ -472,7 +472,7 @@
               </div>
             </li>
 
-            <li class="concerts-cards__item card-concert">
+            <li class="concerts-cards__item card-concert visible">
               <div class="card-concert__inner">
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">THE HATTERS</div>
@@ -584,7 +584,7 @@
               </div>
             </li>
 
-            <li class="concerts-cards__item card-concert">
+            <li class="concerts-cards__item card-concert visible">
               <div class="card-concert__inner">
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Стас <br> Старовойтов</div>
@@ -696,7 +696,7 @@
               </div>
             </li>
 
-            <li class="concerts-cards__item card-concert">
+            <li class="concerts-cards__item card-concert visible">
               <div class="card-concert__inner">
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">ZIVERT</div>
@@ -808,7 +808,7 @@
               </div>
             </li>
 
-            <li class="concerts-cards__item card-concert">
+            <li class="concerts-cards__item card-concert visible">
               <div class="card-concert__inner">
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Группа княzz, Юбилейный концерт</div>
@@ -920,7 +920,7 @@
               </div>
             </li>
 
-            <li class="concerts-cards__item card-concert">
+            <li class="concerts-cards__item card-concert visible">
               <div class="card-concert__inner">
                 <div class="card-concert__content">
                   <div class="card-concert__title title-h3">Ария</div>
@@ -1060,7 +1060,7 @@
                 </div>
                 <div class="cards-action__block">
                   <div class="cards-action__text">Розыгрыш билетов</div>
-                  <div class="cards-action__animate animate-arrow">
+                  <div class="cards-action__animate animate-arrow animate-arrow--border">
                     <ul class="list-reset animate-arrow__inner">
                       <li class="animate-arrow__icon">
                         <svg class="arow">
@@ -1078,6 +1078,7 @@
               </div>
               <div class="cards-action__images animate-img">
                 <picture>
+                  <source srcset="img/cards-action-1-mobi.webp" type="image/webp" media="(max-width: 400px)" width="191" height="168" alt="img">
                   <source srcset="img/cards-action-1-mobile.webp" type="image/webp" media="(max-width: 768px)" width="191" height="195" alt="img">
                   <source srcset="img/cards-action-1.webp" width="165" height="110" type="image/webp">
                   <img loading="lazy" src="img/cards-action-1.jpg" class="image"  alt="img">
@@ -1086,7 +1087,7 @@
             </a>
           </li>
 
-          <li class="cards-action__item">
+          <li class="cards-action__item hidden">
             <a href="#" class="cards-action__link anime-block-hover">
               <div class="cards-action__content">
                 <div class="cards-action__name title-h3">Группа княzz, <br>
@@ -1096,7 +1097,7 @@
                   </div>
                 <div class="cards-action__block">
                   <div class="cards-action__text">Скидка 15%</div>
-                  <div class="cards-action__animate animate-arrow">
+                  <div class="cards-action__animate animate-arrow animate-arrow--border">
                     <ul class="list-reset animate-arrow__inner">
                       <li class="animate-arrow__icon">
                         <svg class="arow">
@@ -1131,107 +1132,110 @@
 
       <section class="social-section border-bottom">
   <div class="container">
-    <div class="social-section__inner">
-      <div class="social-section__content">
-        <h2 class="title-h2">Мы в социальных сетях</h2>
-        <span class="social-section__text">Подписывайся на нас</span>
-        <div class="social">
-          <ul class="list-reset social__inner">
-            <li class="social__item">
-              <a target="_blank" href="https://vk.com/" class="social__link social__link--big">
-                <svg class="social__icon social__icon--big">
-                  <use xlink:href="img/sprite.svg#vk"></use>
-                </svg>
-              </a>
-            </li>
+    <div class="social-section__overflow">
+      <div class="social-section__inner">
+        <div class="social-section__content">
+          <h2 class="title-h2">Мы в социальных сетях</h2>
+          <span class="social-section__text">Подписывайся на нас</span>
+          <div class="social">
+            <ul class="list-reset social__inner">
+              <li class="social__item">
+                <a target="_blank" href="https://vk.com/" class="social__link social__link--big">
+                  <svg class="social__icon social__icon--big">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="social__item">
-              <a target="_blank" href="https://telegram.org/" class="social__link social__link--big">
-                <svg class="social__icon social__icon--big">
-                  <use xlink:href="img/sprite.svg#tg"></use>
-                </svg>
-              </a>
-            </li>
+              <li class="social__item">
+                <a target="_blank" href="https://telegram.org/" class="social__link social__link--big">
+                  <svg class="social__icon social__icon--big">
+                    <use xlink:href="img/sprite.svg#tg"></use>
+                  </svg>
+                </a>
+              </li>
 
-            <li class="social__item">
-              <a target="_blank" href="https://ok.ru/" class="social__link social__link--big">
-                <svg class="social__icon social__icon--big">
-                  <use xlink:href="img/sprite.svg#ok"></use>
-                </svg>
-              </a>
+              <li class="social__item">
+                <a target="_blank" href="https://ok.ru/" class="social__link social__link--big">
+                  <svg class="social__icon social__icon--big">
+                    <use xlink:href="img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="social-section__block">
+          <ul class="list-reset social-section__card">
+            <li class="card-social">
+              <div class="card-social__item">
+                <div class="card-social__header">
+                  <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
+                  <div class="card-social__block">
+                    <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
+                    <time datetime="2023-10-7 8:13">7 окт в 8:13</time>
+                  </div>
+                </div>
+                <div class="card-social__content">
+                  <p>
+                    Группа Dogstar, бас-гитаристом которой является Киану Ривз, выпустила первый с 2000 года альбом!
+                  </p>
+                </div>
+                <img src="img/card-social-1.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+              </div>
+            </li>
+            <li class="card-social">
+              <div class="card-social__item">
+                <div class="card-social__header">
+                  <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
+                  <div class="card-social__block">
+                    <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
+                    <time datetime="2023-10-9 9:16">9 окт в 9:16</time>
+                  </div>
+                </div>
+                <div class="card-social__content">
+                  <p>
+                    65 лет назад родился Виталий Дубинин. Поздравляем с днём рождения.
+                  </p>
+                </div>
+                <img src="img/card-social-2.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+              </div>
+            </li>
+            <li class="card-social">
+              <div class="card-social__item">
+                <div class="card-social__header">
+                  <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
+                  <div class="card-social__block">
+                    <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
+                    <time datetime="2023-10-7 12:55">сегодня в 12:52</time>
+                  </div>
+                </div>
+                <div class="card-social__content">
+                  <p>
+                    Премьера <a target="_blank" href="https://vk.com/numusic2018">NЮ</a> — «Выручай меня»
+                  </p>
+                  <p>Очередной хит, который займет достойное место в наших плейлистах</p>
+                  <p> А мы с нетерпением ждем встречи на живых выступлениях:</p>
+                  <p>
+                    <a target="_blank" href="https://vk.com/nu_brn">
+                      <span>
+                        15 октября — Барнаул <br>
+                        24 ноября — Кемерово <br>
+                        25 ноября — Новокузнецк <br>
+                      </span>
+                    </a>
+                  </p>
+
+                </div>
+                <img src="img/card-social-3.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+              </div>
             </li>
           </ul>
         </div>
       </div>
-
-      <div class="social-section__block">
-        <ul class="list-reset social-section__card">
-          <li class="card-social">
-            <div class="card-social__item">
-              <div class="card-social__header">
-                <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
-                <div class="card-social__block">
-                  <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
-                  <time datetime="2023-10-7 8:13">7 окт в 8:13</time>
-                </div>
-              </div>
-              <div class="card-social__content">
-                <p>
-                  Группа Dogstar, бас-гитаристом которой является Киану Ривз, выпустила первый с 2000 года альбом!
-                </p>
-              </div>
-              <img src="img/card-social-1.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
-            </div>
-          </li>
-          <li class="card-social">
-            <div class="card-social__item">
-              <div class="card-social__header">
-                <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
-                <div class="card-social__block">
-                  <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
-                  <time datetime="2023-10-9 9:16">9 окт в 9:16</time>
-                </div>
-              </div>
-              <div class="card-social__content">
-                <p>
-                  65 лет назад родился Виталий Дубинин. Поздравляем с днём рождения.
-                </p>
-              </div>
-              <img src="img/card-social-2.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
-            </div>
-          </li>
-          <li class="card-social">
-            <div class="card-social__item">
-              <div class="card-social__header">
-                <img loading="lazy" src="img/logo-card.svg" width="37" height="37" class="image" alt="img">
-                <div class="card-social__block">
-                  <h3 class="card-social__name">ТриГрупп. Концерты России</h3>
-                  <time datetime="2023-10-7 12:55">сегодня в 12:52</time>
-                </div>
-              </div>
-              <div class="card-social__content">
-                <p>
-                  Премьера <a target="_blank" href="https://vk.com/numusic2018">NЮ</a> — «Выручай меня»
-                </p>
-                <p>Очередной хит, который займет достойное место в наших плейлистах</p>
-                <p> А мы с нетерпением ждем встречи на живых выступлениях:</p>
-                <p>
-                  <a target="_blank" href="https://vk.com/nu_brn">
-                    <span>
-                      15 октября — Барнаул <br>
-                      24 ноября — Кемерово <br>
-                      25 ноября — Новокузнецк <br>
-                    </span>
-                  </a>
-                </p>
-
-              </div>
-              <img src="img/card-social-3.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
+
   </div>
 </section>
 
@@ -1282,6 +1286,8 @@
               <a href="#" class="card-basic anime-block-hover">
                 <div class="card-basic__header anim-block__img">
                   <picture class="card-basic__img animate-img">
+                    <source srcset="img/card-basic__img1-420.webp" type="image/webp" media="(max-width: 420px)" width="345" height="245" alt="img">
+                    <source srcset="img/card-basic__img1-768.webp" type="image/webp" media="(max-width: 768px)" width="708" height="431" alt="img">
                     <source srcset="img/card-basic__img1.webp" type="image/webp">
                     <img loading="lazy" src="img.card-basic__img1.jpg" class="image" width="463" height="258" alt="concert">
                   </picture>
@@ -1291,7 +1297,7 @@
                   </div>
                 </div>
                 <div class="card-basic__content basic-card">
-                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong>Галлерея ХОЛЛ
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
                   </span>
                   <span class="basic-card__date">5 Июн 2022</span>
                 </div>
@@ -1300,6 +1306,8 @@
               <a href="#" class="card-basic anime-block-hover">
                 <div class="card-basic__header anim-block__img">
                   <picture class="card-basic__img animate-img">
+                    <source srcset="img/card-basic__img2-420.webp" type="image/webp" media="(max-width: 420px)" width="345" height="245" alt="img">
+                    <source srcset="img/card-basic__img2-768.webp" type="image/webp" media="(max-width: 768px)" width="708" height="431" alt="img">
                     <source srcset="img/card-basic__img2.webp" type="image/webp">
                     <img loading="lazy" src="img.card-basic__img2.jpg" class="image" width="463" height="258" alt="concert">
                   </picture>
@@ -1361,12 +1369,60 @@
 
       <button class="footer-top__button btn btn-reset btn--border-transparent">Напишите нам</button>
     </div>
+
+    <div class="footer-menu">
+      <div class="footer-menu__button accordion-start-js">
+        <span>Меню</span>
+        <svg class="arrow">
+          <use xlink:href="img/sprite.svg#arrow"></use>
+        </svg>
+      </div>
+      <ul class="  list-reset footer-center__list footer-center__list--mobile accordion-content-js">
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Акции на билеты</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">О нас</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Контакты</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Помощь</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Новости</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Букинг</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Архив</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Аккредитация</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Легендарное</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Афиша концертов</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Правила</a>
+        </li>
+        <li class="footer-center__item">
+          <a href="#" class="footer-center__link">Возврат билетов</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="footer-center">
       <ul class="list-reset footer-center__working working">
         <li class="working__item">Пн-Пт: 09:00–21:00</li>
         <li class="working__item">Пн-Пт: 09:00–21:00</li>
       </ul>
-      <ul class="list-reset footer-center__list">
+      <ul class="list-reset footer-center__list footer-center__list--pc">
         <li class="footer-center__item">
           <a href="#" class="footer-center__link">Акции на билеты</a>
         </li>

@@ -17,6 +17,10 @@
     padding: 15px;
     border: transparent;
     width: 100%;
+
+    @include max600 {
+      font-size: 14px;
+    }
   }
 
   &__button {

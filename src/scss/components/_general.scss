@@ -127,6 +127,11 @@
     &--big{
       width: 60px;
       height: 60px;
+
+      @include max400 {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     @media screen and (min-width: 1024px) {
@@ -143,6 +148,11 @@
     &--big{
       width: 30px;
       height: 30px;
+
+      @include max400 {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
@@ -169,6 +179,10 @@
     font-size: 16px;
     padding: 10px 67px 10px 15px;
 
+    @include max768 {
+      padding: 5px 67px 5px 10px;
+    }
+
     @include max600 {
       font-size: 14px;
       padding: 8px 60px 8px 15px;
@@ -183,6 +197,8 @@
     bottom: 0;
     background: var(--ui-accent, #FFB21C);
   }
+
+
 
   @include max600 {
     .animate-arrow{
@@ -202,6 +218,7 @@
 
   &__inner {
     display: flex;
+
   }
 
   &__img {
@@ -222,6 +239,11 @@
     backdrop-filter: blur(20px);
     color: var(--typography-black, #0D0D0D);
     padding: 5px 20px;
+
+    @include max600 {
+      padding: 5px 10px;
+      flex-grow: 1;
+    }
   }
 
   &__date {
@@ -234,6 +256,10 @@
     font-weight: 400;
     line-height: 140%;
     margin-left: -1px;
+    @include max600 {
+      font-size: 14px;
+      justify-content: flex-start;
+    }
   }
 
   &__location{
@@ -252,6 +278,11 @@
   font-weight: 700;
   line-height: 105%;
   margin-bottom: 60px;
+
+  &--bottom30{
+    margin-bottom: 30px;
+  }
+
   &__block{
     display: flex;
     flex-wrap: wrap;
@@ -261,6 +292,9 @@
 
   &__link{
     flex-shrink: 0;
+    @include max768 {
+      padding: 8px 15px
+    }
   }
 
   &__text{
@@ -272,14 +306,18 @@
     font-style: normal;
     font-weight: 700;
     line-height: 105%;
+
+    @include max600 {
+      font-size: 28px;
+      span{
+        display: block;
+      }
+    }
   }
 
   @include max600 {
-    font-size: 28px;
     margin-bottom: 40px;
-    span{
-      display: block;
-    }
+    font-size: 28px;
   }
 }
 
@@ -379,6 +417,11 @@
   }
 
   &__date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--typography-white-medium-contrast);
     @include max768 {
       &--mobi{
         display: none;
@@ -392,7 +435,7 @@
   flex-wrap: wrap;
   gap: 12px;
   @include max991 {
-    gap: 5px;
+    gap: 6px 5px;
   }
   &__item {
     flex-grow: 1;
@@ -410,6 +453,10 @@
     align-items: center;
     width: 100%;
     padding: 6px 15px;
+    @include max768 {
+      padding: 4px 12px;
+      font-size: 16px;
+    }
   }
 }
 
@@ -427,6 +474,10 @@
     &--big{
       border-radius: 12px 12px 147px 12px;
     }
+@include max768 {
+  border-radius: 12px 12px 12px 12px;
+}
+
   }
 
   &__item{
@@ -447,6 +498,10 @@
       width: 25px;
       height: 25px;
     }
+
+    @include max768 {
+      bottom: 5px;
+    }
   }
 }
 
@@ -459,6 +514,11 @@
     grid-template-columns: repeat(12, 1fr);
     margin-bottom: 40px;
     min-height: 714px;
+
+    @include max400 {
+      min-height: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__contain {
@@ -466,6 +526,15 @@
     border-radius: 12px;
     display: flex;
     grid-column: 8 span;
+
+    @media screen and (max-width: 1150px) {
+      grid-column: 12 span;
+    }
+
+    @include max768 {
+      display: none;
+    }
+
   }
 
   &__content {
@@ -480,6 +549,12 @@
 
   &__container {
     position: relative;
+    @media screen and (max-width: 1150px) {
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
   }
 
   &__name {
@@ -506,25 +581,50 @@
 
   &__cards {
     grid-column: 4 span;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
     a{
       &:not(:last-child){
-        margin-bottom: 20px;
+        margin-bottom: auto;
       }
     }
+
+    @media screen and (max-width: 1150px) {
+      grid-column: 12 span;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    @include max768 {
+      flex-direction: column;
+    }
+
+    @include max400 {
+      gap: 15px;
+    }
+
   }
 }
 
 .card-basic {
   border-radius: 12px;
+  flex-grow: 1;
   background: #fff;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 
+  @include max400 {
+    flex-grow: 0;
+  }
   &__img {
-    overflow: hidden;
     display: flex;
     align-items: flex-start;
     img{
       height: 100%;
+      width: 100%;
     }
   }
 
@@ -540,8 +640,18 @@
 
   &__header {
     position: relative;
+    overflow: hidden;
     background-image: linear-gradient(21deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-    height: 252px;
+    max-height: 252px;
+    height: 100%;
+
+    @include max768 {
+      max-height: 431px;
+    }
+
+    @include max400 {
+      max-height: 247px;
+    }
   }
 
   &__name {
@@ -550,6 +660,10 @@
     line-height: 1.1;
     text-transform: uppercase;
     color: var(--ui-white);
+
+    @include max400 {
+      font-size: 20px;
+    }
   }
 
   &__content {
@@ -575,14 +689,10 @@
 
 .animate-arrow {
   width: 40px;
-  height: 40px;
-  background: var(--ui-accent, #FFB21C);
-  border-radius: 50%;
 
+  background: var(--ui-accent, #FFB21C);
   .animate-arrow__icon{
     width: 40px;
-    height: 40px;
-
     .arow{
       width: 20px;
       height: 20px;
@@ -591,6 +701,14 @@
 
   .animate-arrow__inner{
     transform: translateX(-40px);
+  }
+
+  &--border{
+    border-radius: 50%;
+    height: 40px;
+    .animate-arrow__icon{
+      height: 40px;
+    }
   }
 }
 
@@ -623,5 +741,66 @@
   font-size: 14px;
   text-align: center;
   color: var(--typography-black);
+  @include max400 {
+    font-size: 12px;
+  }
 }
+
+.slider-arrow{
+  display: flex;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background: var(--ui-white);
+  &::after{
+    display: none;
+  }
+  svg{
+    width: 24px;
+    height: 18px;
+  }
+}
+
+.slider-container{
+  position: relative;
+  .swiper-button-next{
+    right: -60px;
+  }
+
+  .swiper-button-prev{
+    left: -60px;
+  }
+}
+
+.slider {
+
+  &__slide {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  &__img {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--ui-white);
+  }
+
+
+}
+
+
 

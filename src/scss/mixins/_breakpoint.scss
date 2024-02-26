@@ -96,8 +96,8 @@
   }
 }
 
-@mixin max375 {
-  @media (max-width: (374px)) {
+@mixin max400 {
+  @media (max-width: (400px)) {
     @content;
   }
 }
