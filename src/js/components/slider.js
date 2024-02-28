@@ -16,7 +16,7 @@ if (slidersContainer.length > 0) {
     if (slider && nextButton && prevButton) {
       let swiper = new Swiper(slider, {
         slidesPerView: 1.4,
-        spaceBetween: 10,
+        spaceBetween: 20,
         navigation: {
           nextEl: nextButton,
           prevEl: prevButton,
@@ -24,11 +24,12 @@ if (slidersContainer.length > 0) {
         breakpoints: {
           1024: {
             slidesPerView: 4,
-            spaceBetween: 20
           },
           768: {
+            slidesPerView: 3,
+          },
+          500: {
             slidesPerView: 2,
-            spaceBetween: 10
           }
         }
       });

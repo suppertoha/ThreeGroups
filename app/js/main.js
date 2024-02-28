@@ -25,6 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import './components/select';
 
 /***/ }),
 
@@ -157,6 +158,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+//import './vendor/choices.min.js';
 
 /***/ }),
 
@@ -209,7 +211,8 @@ function hideExcessButtons() {
       const title = content.querySelector('.card-concert__title');
       const buttons = content.querySelectorAll('.buttons-banner__item');
       const titleHeight = title.offsetHeight;
-      const buttonsBannerHeight = content.querySelector('.buttons-banner').offsetHeight;
+      //const buttonsBannerHeight = content.querySelector('.buttons-banner').offsetHeight;
+
       let currentHeight = titleHeight;
       let excessButtons = 0;
       let itemMoreButtonHeight = 0;
@@ -259,7 +262,8 @@ function hideExcessButtons() {
   window.addEventListener('resize', updateButtons);
   updateButtons();
 }
-hideExcessButtons();
+
+//hideExcessButtons();
 
 //function hideExcessButtons() {
 //  function updateButtons() {
@@ -449,19 +453,20 @@ if (slidersContainer.length > 0) {
     if (slider && nextButton && prevButton) {
       let swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
         slidesPerView: 1.4,
-        spaceBetween: 10,
+        spaceBetween: 20,
         navigation: {
           nextEl: nextButton,
           prevEl: prevButton
         },
         breakpoints: {
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 20
+            slidesPerView: 4
           },
           768: {
-            slidesPerView: 2,
-            spaceBetween: 10
+            slidesPerView: 3
+          },
+          500: {
+            slidesPerView: 2
           }
         }
       });

@@ -6,7 +6,7 @@
     margin-top: -60px;
     border-radius: 12px 12px 70px 12px;
 
-    @include max400 {
+    @include max768 {
       border-radius: 12px 12px 12px 12px;
     }
   }
@@ -107,11 +107,14 @@
       background: url(../img/heard.png) no-repeat;
 
       @include max768 {
+        top: -63%;
+        background-size: 80%;
         right: -18px;
         bottom: 0;
-        top: -50%;
-        background-size: 80%;
+      }
 
+      @include max400 {
+        top: -50%;
       }
 
       @include max400 {
@@ -191,8 +194,13 @@
   }
   &:nth-child(3) {
     transform: rotate(15deg) translate(4px, 4px);
-    right: 6%;
-    top: -17%;
+    right: 20%;
+    top: -4%;
+    @include max768 {
+      right: 6%;
+      top: -17%;
+    }
+
 
     @include max400{
       right: -5%;

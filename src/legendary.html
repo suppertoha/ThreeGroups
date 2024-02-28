@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item">Легендарное</li>
+        </ul>
+      </section>
+
+      <div class="title-h2 container title-h2--bottom30">
+        <div class="title-h2__block">
+          <h2 class="title-h2__text ">Легендарное</h2>
+          <div class="select-block">
+          </div>
+        </div>
+      </div>
+
+      <!-- concerts-cards -->
+      <section class="concerts-cards container">
+        <div class="grid-col2 grid-col2--mb">
+          <a href="#" class="card-basic grid-col2__item anime-block-hover">
+            <div class="card-basic__header card-basic__header--h100 anim-block__img">
+              <picture>
+                <source srcset="img/legendary-card-mobile1.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245" alt="img">
+                <source srcset="img/legendary-card1.webp" type="image/webp" media="(max-width: 1024px)" width="705" height="457" alt="img">
+                <img loading="lazy" src="img/legendary-card1.jpg" class="image" width="705" height="457" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Lumen</span>
+                <div class="anime-button--hover button-card">
+                    <span>
+                      Подробнее
+                    </span>
+                    <div class="button-card__animate animate-arrow">
+                      <ul class="list-reset animate-arrow__inner">
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <ul class="basic-card__items list-reset">
+                <li class="basic-card__item">
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+                  </span>
+                  <time datetime="2023-6-5 19:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+                </li>
+
+                <li class="basic-card__item">
+                  <span class="basic-card__info">Человек собрано</span>
+                  <span class="basic-card__sum">1200</span>
+                </li>
+              </ul>
+
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col2__item anime-block-hover">
+            <div class="card-basic__header card-basic__header--h100 anim-block__img">
+              <picture>
+                <source srcset="img/legendary-card-mobile2.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245" alt="img">
+                <source srcset="img/legendary-card2.webp" type="image/webp" media="(max-width: 1024px)" width="705" height="457" alt="img">
+                <img loading="lazy" src="img/legendary-card2.jpg" class="image" width="705" height="457" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">The Hatters</span>
+                <div class="anime-button--hover button-card">
+                    <span>
+                      Подробнее
+                    </span>
+                    <div class="button-card__animate animate-arrow">
+                      <ul class="list-reset animate-arrow__inner">
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <ul class="basic-card__items list-reset">
+                <li class="basic-card__item">
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+                  </span>
+                  <time datetime="2023-6-5 19:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+                </li>
+
+                <li class="basic-card__item">
+                  <span class="basic-card__info">Человек собрано</span>
+                  <span class="basic-card__sum">1200</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col2__item anime-block-hover">
+            <div class="card-basic__header card-basic__header--h100 anim-block__img">
+              <picture>
+                <source srcset="img/legendary-card-mobile3.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245" alt="img">
+                <source srcset="img/legendary-card3.webp" type="image/webp" media="(max-width: 1024px)" width="705" height="457" alt="img">
+                <img loading="lazy" src="img/legendary-card3.jpg" class="image" width="705" height="457" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Ария</span>
+                <div class="anime-button--hover button-card">
+                    <span>
+                      Подробнее
+                    </span>
+                    <div class="button-card__animate animate-arrow">
+                      <ul class="list-reset animate-arrow__inner">
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <ul class="basic-card__items list-reset">
+                <li class="basic-card__item">
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+                  </span>
+                  <time datetime="2023-6-5 19:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+                </li>
+
+                <li class="basic-card__item">
+                  <span class="basic-card__info">Человек собрано</span>
+                  <span class="basic-card__sum">1200</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col2__item anime-block-hover">
+            <div class="card-basic__header card-basic__header--h100 anim-block__img">
+              <picture>
+                <source srcset="img/legendary-card-mobile4.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245" alt="img">
+                <source srcset="img/legendary-card4.webp" type="image/webp" media="(max-width: 1024px)" width="705" height="457" alt="img">
+                <img loading="lazy" src="img/legendary-card4.jpg" class="image" width="705" height="457" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">стас старовойтов</span>
+                <div class="anime-button--hover button-card">
+                    <span>
+                      Подробнее
+                    </span>
+                    <div class="button-card__animate animate-arrow">
+                      <ul class="list-reset animate-arrow__inner">
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <ul class="basic-card__items list-reset">
+                <li class="basic-card__item">
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+                  </span>
+                  <time datetime="2023-6-5 19:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+                </li>
+
+                <li class="basic-card__item">
+                  <span class="basic-card__info">Человек собрано</span>
+                  <span class="basic-card__sum">1200</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col2__item anime-block-hover">
+            <div class="card-basic__header card-basic__header--h100 anim-block__img">
+              <picture>
+                <source srcset="img/legendary-card-mobile5.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245" alt="img">
+                <source srcset="img/legendary-card5.webp" type="image/webp" media="(max-width: 1024px)" width="705" height="457" alt="img">
+                <img loading="lazy" src="img/legendary-card5.jpg" class="image" width="705" height="457" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">ZIVERT</span>
+                <div class="anime-button--hover button-card">
+                    <span>
+                      Подробнее
+                    </span>
+                    <div class="button-card__animate animate-arrow">
+                      <ul class="list-reset animate-arrow__inner">
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <ul class="basic-card__items list-reset">
+                <li class="basic-card__item">
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+                  </span>
+                  <time datetime="2023-6-5 19:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+                </li>
+
+                <li class="basic-card__item">
+                  <span class="basic-card__info">Человек собрано</span>
+                  <span class="basic-card__sum">1200</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col2__item anime-block-hover">
+            <div class="card-basic__header card-basic__header--h100 anim-block__img">
+              <picture>
+                <source srcset="img/legendary-card-mobile6.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245" alt="img">
+                <source srcset="img/legendary-card6.webp" type="image/webp" media="(max-width: 1024px)" width="705" height="457" alt="img">
+                <img loading="lazy" src="img/legendary-card6.jpg" class="image" width="705" height="457" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Мельница</span>
+                <div class="anime-button--hover button-card">
+                    <span>
+                      Подробнее
+                    </span>
+                    <div class="button-card__animate animate-arrow">
+                      <ul class="list-reset animate-arrow__inner">
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                        <li class="animate-arrow__icon">
+                          <svg class="arow">
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <ul class="basic-card__items list-reset">
+                <li class="basic-card__item">
+                  <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+                  </span>
+                  <time datetime="2023-6-5 19:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+                </li>
+
+                <li class="basic-card__item">
+                  <span class="basic-card__info">Человек собрано</span>
+                  <span class="basic-card__sum">1200</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+
+        </div>
+
+        <button class="concerts-cards__button btn btn--big btn--black">Показать еще</button>
+      </section>
+      <!-- End concerts-cards -->
+
+    </main>
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

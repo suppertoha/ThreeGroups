@@ -7,7 +7,7 @@ function hideExcessButtons() {
       const title = content.querySelector('.card-concert__title');
       const buttons = content.querySelectorAll('.buttons-banner__item');
       const titleHeight = title.offsetHeight;
-      const buttonsBannerHeight = content.querySelector('.buttons-banner').offsetHeight;
+      //const buttonsBannerHeight = content.querySelector('.buttons-banner').offsetHeight;
 
       let currentHeight = titleHeight;
       let excessButtons = 0;
@@ -66,7 +66,7 @@ function hideExcessButtons() {
   updateButtons();
 }
 
-hideExcessButtons();
+//hideExcessButtons();
 
 //function hideExcessButtons() {
 //  function updateButtons() {

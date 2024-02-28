@@ -1,6 +1,10 @@
 .breadcrumb {
   margin-bottom: 40px;
 
+  @include max400 {
+    display: none;
+  }
+
   &__items {
     display: flex;
     flex-wrap: wrap;
