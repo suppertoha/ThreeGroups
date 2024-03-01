@@ -19,6 +19,10 @@
     padding: 13px 20px;
   }
 
+  &--big2 {
+    padding: 15px 50px;
+  }
+
   @include max600 {
     font-size: 14px;
   }
@@ -162,21 +166,32 @@
 }
 
 .button-card {
-  position: absolute;
   overflow: hidden;
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
+  position: absolute;
   right: 20px;
   bottom: 20px;
   display: flex;
   font-family: Inter;
+
+  &--static{
+    position: static;
+  }
+
+  &--bg-green{
+    background: var(--ui-border-dark);
+  }
+
   span {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
     font-size: 16px;
     padding: 7px 67px 7px 10px;
+    display: flex;
+    align-items: center;
 
     @include max600 {
       font-size: 14px;
@@ -706,7 +721,7 @@
     justify-content: space-between;
     span {
       display: block;
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 5px;
       }
     }
@@ -737,8 +752,6 @@
     font-weight: 700;
     font-size: 16px;
   }
-
-
 }
 .anime-button--hover {
   transition: 0.3s;
@@ -827,12 +840,19 @@
   width: 40px;
   height: 40px;
   background: var(--ui-white);
+  transition: 0.3s;
   &::after {
     display: none;
   }
   svg {
     width: 24px;
     height: 18px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      background: var(--ui-accent);
+    }
   }
 }
 
