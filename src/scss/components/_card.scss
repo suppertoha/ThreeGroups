@@ -92,6 +92,7 @@
   &__inner {
     display: flex;
     position: relative;
+    overflow: hidden;
     height: 265px;
     @include max600 {
       flex-direction: column;
@@ -282,9 +283,11 @@
       height: 100%;
       width: 4px;
       background: #d0d0d0;
+      border-radius: 50px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: #ffb21c;
+      background: var(--ui-dark);
+      border-radius: 50px;
     }
 
     .hidden-button {

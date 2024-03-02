@@ -288,7 +288,7 @@
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 105%;
+  line-height: 1.4;
   margin-bottom: 60px;
 
   &--bottom30 {
@@ -434,10 +434,8 @@
     line-height: 1.4;
     text-align: center;
     color: var(--typography-white-medium-contrast);
-    @include max768 {
-      &--mobi {
-        display: none;
-      }
+    &--black {
+      color: var(--typography-black);
     }
   }
 }
@@ -512,6 +510,11 @@
     @include max768 {
       bottom: 5px;
     }
+  }
+
+
+  .animate-arrow {
+    bottom: 0px;
   }
 }
 

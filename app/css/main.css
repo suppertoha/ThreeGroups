@@ -217,6 +217,13 @@ a {
   position: relative;
 }
 
+* {
+  padding-top: 0;
+  margin-top: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 input,
 textarea {
   -moz-appearance: none;
@@ -557,7 +564,7 @@ a:hover {
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 105%;
+  line-height: 1.4;
   margin-bottom: 60px;
 }
 .title-h2--bottom30 {
@@ -724,10 +731,8 @@ a:hover {
   text-align: center;
   color: var(--typography-white-medium-contrast);
 }
-@media (max-width: 768px) {
-  .link-info__date--mobi {
-    display: none;
-  }
+.link-info__date--black {
+  color: var(--typography-black);
 }
 
 .buttons-banner {
@@ -820,6 +825,9 @@ a:hover {
   .block-border .animate-arrow {
     bottom: 5px;
   }
+}
+.block-border .animate-arrow {
+  bottom: 0px;
 }
 
 .legendary-section__inner {
@@ -2583,9 +2591,9 @@ a:hover {
   cursor: pointer;
 }
 .accordion-start-js.open svg {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .accordion-start-js svg {
   width: 20px;
@@ -2603,24 +2611,7 @@ a:hover {
   position: relative;
   z-index: 1;
   color: #1e1e1e;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  visibility: hidden;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-transition: max-height 0.8s ease;
-  -o-transition: max-height 0.8s ease;
-  transition: max-height 0.8s ease;
 }
-.accordion-content-js.open {
-  max-height: inherit;
-  opacity: 1;
-  overflow: visible;
-  visibility: visible;
-  padding-top: 20px;
-}
-
 .js-text__more-button {
   margin-top: 10px;
   border: none;
@@ -2647,19 +2638,32 @@ a:hover {
   font-weight: 400;
   line-height: 140%;
 }
+.accordion__text *:last-child {
+  margin-bottom: 0;
+}
 .accordion__text p:not(:last-child) {
   margin-bottom: 10px;
 }
 .accordion__item {
   border-radius: 12px;
   background: var(--ui-white, #FFF);
-  padding: 35px 40px;
 }
 .accordion__item:not(:last-child) {
   margin-bottom: 20px;
 }
+.accordion__header {
+  padding: 35px 40px;
+}
 @media (max-width: 600px) {
-  .accordion__item {
+  .accordion__header {
+    padding: 20px;
+  }
+}
+.accordion__body {
+  padding: 0px 40px 35px;
+}
+@media (max-width: 600px) {
+  .accordion__body {
     padding: 20px;
   }
 }
@@ -2715,6 +2719,31 @@ a:hover {
   .questions {
     margin-top: 80px;
   }
+}
+
+.faq .ask {
+  position: relative;
+}
+.faq .ask:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.faq .answer {
+  overflow: hidden;
+  display: none;
+}
+
+.faq .answer.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .concerts-cards__inner {
@@ -2798,6 +2827,7 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  overflow: hidden;
   height: 265px;
 }
 @media (max-width: 600px) {
@@ -3003,9 +3033,11 @@ a:hover {
   height: 100%;
   width: 4px;
   background: #d0d0d0;
+  border-radius: 50px;
 }
 .item-more__buttons::-webkit-scrollbar-thumb {
-  background-color: #ffb21c;
+  background: var(--ui-dark);
+  border-radius: 50px;
 }
 .item-more__buttons .hidden-button {
   display: block;
@@ -3740,38 +3772,107 @@ a:hover {
   }
 }
 
-.choices__inner {
-  padding: 5px 10px;
-  border-radius: 15px;
-  border: 1px solid #000;
+.main-select {
+  min-width: 250px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--typography-black);
+}
+@media (max-width: 500px) {
+  .main-select {
+    min-width: 100%;
+    font-size: 14px;
+  }
+}
+.main-select .choices__inner {
+  padding: 5px 15px;
+  border-radius: 37px;
+  border: none;
   background-color: #fff;
   min-height: auto;
 }
-
-.is-open .choices__inner {
+.main-select .is-open .choices__list--single {
+  display: inline-block;
+  padding: 4px 16px 4px 4px;
+  width: 100%;
+}
+.main-select .is-open .choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 7.5px;
+}
+.main-select .is-open .choices__list--dropdown {
+  border: none;
+  background-color: #fff;
+  border-radius: 19px;
+  z-index: 100;
+}
+@media (min-width: 640px) {
+  .main-select .choices__list--dropdown .choices__item--selectable {
+    margin-right: 10px;
+  }
+}
+.main-select .choices__list--dropdown .choices__list {
+  max-height: 233px;
+}
+.main-select .choices__list--dropdown .choices__list::-webkit-scrollbar {
+  height: 100%;
+  width: 4px;
+  background: #E7E7E7;
+  border-radius: 50px;
+}
+.main-select .choices__list--dropdown .choices__list::-webkit-scrollbar-thumb {
+  background: var(--ui-dark);
+  border-radius: 50px;
+}
+.main-select .choices__list--dropdown {
+  border: 1px solid var(--ui-border-dark);
+  padding: 20px 10px 20px 15px;
+  background-color: #fff;
+  top: calc(100% + 5px);
+}
+.main-select .choices__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--typography-black);
+  border-radius: 37px;
+}
+.main-select .choices__list--dropdown .choices__item {
+  position: relative;
   padding: 5px 10px;
-  border-radius: 15px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border: 1px solid #000;
-  background-color: #fff;
-  min-height: auto;
+  font-size: 14px;
 }
-
-.choices__list--dropdown {
-  border: 1px solid #000;
-  background-color: #fff;
-}
-
-.is-open .choices__list--dropdown {
-  border: 1px solid #000;
-  background-color: #fff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+.main-select .choices__list--dropdown .choices__item--selectable.is-highlighted:after {
   display: none;
+}
+.main-select .choices[data-type*=select-one]:after {
+  content: "";
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-color: none;
+  border-width: 5px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -2.5px;
+  pointer-events: none;
+}
+.main-select .choices[data-type*=select-one]:after {
+  height: 8px;
+  width: 8px;
+  z-index: 3;
+  top: 40%;
+  border: 1px solid var(--typography-black);
+  border-width: 0 0 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.main-select .choices[data-type*=select-one].is-open:after {
+  top: 50%;
+  border: 1px solid var(--typography-black);
+  border-width: 1px 1px 0 0;
 }
 
 .calendar__body {
