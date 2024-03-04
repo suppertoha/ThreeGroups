@@ -1,6 +1,5 @@
 .main-block {
-
-  &--mb{
+  &--mb {
     margin-bottom: 120px;
 
     @include max400 {
@@ -25,7 +24,7 @@
     align-items: flex-start;
 
     @include max400 {
-      img{
+      img {
         width: 100%;
       }
     }
@@ -61,8 +60,11 @@
     }
   }
 
-  &__btn{
+  &__btn {
+    display: flex;
+    flex-direction: column;
     margin-top: 60px;
+    gap: 10px;
   }
 
   &__items {
@@ -81,8 +83,14 @@
     }
   }
 
-  &__item {
-
+  &__button {
+    gap: 10px;
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      color: var(--typography-black-medium-contrast);
+    }
   }
 
   &__description {

@@ -15,6 +15,13 @@
   line-height: 140%;
   transition: 0.3s;
 
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--typography-black-medium-contrast);
+    transition: 0.3s;
+  }
+
   &--big {
     padding: 13px 20px;
   }
@@ -33,6 +40,24 @@
       &:hover {
         background: var(--ui-dark, #2c2f31);
         color: #ffffff;
+        span{
+          color: #ffffff;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &--border-yellow {
+    border: 1px solid var(--ui-accent-medium-contrast);
+    border-radius: 37px;
+    padding: 8px 20px;
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        background: var(--ui-accent, #ffb21c);
+        svg {
+          fill: var(--ui-dark, #2c2f31);
+        }
       }
     }
   }
@@ -176,11 +201,11 @@
   display: flex;
   font-family: Inter;
 
-  &--static{
+  &--static {
     position: static;
   }
 
-  &--bg-green{
+  &--bg-green {
     background: var(--ui-border-dark);
   }
 
@@ -318,6 +343,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 105%;
+
+    &--mr-null {
+      margin-right: 0;
+    }
 
     @include max600 {
       font-size: 28px;
@@ -511,7 +540,6 @@
       bottom: 5px;
     }
   }
-
 
   .animate-arrow {
     bottom: 0px;
@@ -1008,5 +1036,11 @@
   input:checked + span::before {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+.poster{
+  &-slider--bottom30{
+    margin-bottom: 30px;
   }
 }

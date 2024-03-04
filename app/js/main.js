@@ -281,28 +281,34 @@ function hideExcessButtons() {
   const cardContents = document.querySelectorAll(".js-cart");
   if (cardContents.length === 0) return;
   cardContents.forEach(content => {
-    const containerHeight = content.clientHeight - parseInt(window.getComputedStyle(content).paddingTop);
+    const containerHeight = content.clientHeight - parseInt(window.getComputedStyle(content).paddingTop) - parseInt(window.getComputedStyle(content).paddingBottom) + 5;
     const title = content.querySelector(".card-concert__title");
     const titleHeight = title.offsetHeight + parseInt(window.getComputedStyle(title).marginBottom);
-    let currentHeight = titleHeight;
     let excessButtons = 0;
-    const itemMoreButtonsContainer = content.querySelector(".item-more__buttons");
     const itemMoreButton = content.querySelector(".item-more");
     const itemMoreNum = content.querySelector(".item-more__num");
+    const buttonsBanner = content.querySelector('.buttons-banner');
     const buttons = content.querySelectorAll(".buttons-banner__item:not(.item-more)");
     buttons.forEach(button => {
-      currentHeight += button.offsetHeight + 5;
-      console.log('currentHeight', currentHeight);
-      if (currentHeight > containerHeight) {
+      button.classList.remove("hidden-button");
+    });
+    itemMoreButton.classList.add("hidden-button");
+    [...buttons].reverse().forEach(button => {
+      const buttonsBannerHeight = buttonsBanner.offsetHeight;
+      if (buttonsBannerHeight > containerHeight - titleHeight) {
         button.classList.add("hidden-button");
         excessButtons++;
-        itemMoreButtonsContainer.appendChild(button.cloneNode(true));
-        button.remove();
       }
     });
     if (excessButtons > 0) {
       itemMoreButton.classList.remove("hidden-button");
       itemMoreNum.textContent = excessButtons;
+      const buttonsBannerHeight = buttonsBanner.offsetHeight;
+      if (buttonsBannerHeight > containerHeight - titleHeight) {
+        const buttons = content.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
+        buttons[buttons.length - 1].classList.add('hidden-button');
+        itemMoreNum.textContent = excessButtons + 1;
+      }
     } else {
       itemMoreButton.classList.add("hidden-button");
     }
@@ -380,58 +386,62 @@ multiDefault();
   \*********************************************/
 /***/ (() => {
 
-const vLinks = document.querySelector('.visible-links');
-const hLinks = document.querySelector('.hidden-links');
-const btn = document.querySelector('.nav-text');
-const breaks = [];
-const updateNav = () => {
-  const nav = document.querySelector('.header-top__body');
-  const availableSpace = btn && btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - (btn && btn.offsetWidth) - 0;
-  if (vLinks && hLinks && btn && nav) {
-    if (vLinks.offsetWidth > availableSpace) {
-      breaks.push(vLinks.offsetWidth);
-      hLinks.insertBefore(vLinks.lastElementChild, hLinks.firstElementChild);
-      if (btn.classList.contains('hidden') && hLinks.children.length > 0) {
-        btn.classList.remove('hidden');
+function menuGrouping() {
+  const vLinks = document.querySelector('.visible-links');
+  const hLinks = document.querySelector('.hidden-links');
+  const btn = document.querySelector('.nav-text');
+  const breaks = [];
+  if (!vLinks) return;
+  const updateNav = () => {
+    const nav = document.querySelector('.header-top__body');
+    const availableSpace = btn && btn.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - (btn && btn.offsetWidth) - 0;
+    if (vLinks && hLinks && btn && nav) {
+      if (vLinks.offsetWidth > availableSpace) {
+        breaks.push(vLinks.offsetWidth);
+        hLinks.insertBefore(vLinks.lastElementChild, hLinks.firstElementChild);
+        if (btn.classList.contains('hidden') && hLinks.children.length > 0) {
+          btn.classList.remove('hidden');
+        }
+      } else {
+        if (availableSpace > breaks[breaks.length - 1]) {
+          vLinks.appendChild(hLinks.firstElementChild);
+          breaks.pop();
+        }
+        if (breaks.length < 1) {
+          btn.classList.add('hidden');
+          hLinks.classList.add('hidden');
+        }
       }
-    } else {
-      if (availableSpace > breaks[breaks.length - 1]) {
-        vLinks.appendChild(hLinks.firstElementChild);
-        breaks.pop();
+      btn.setAttribute('count', breaks.length);
+      if (hLinks.children.length > 0) {
+        btn.textContent = 'Еще';
+        btn.classList.add('active');
+      } else {
+        btn.textContent = '';
+        btn.classList.remove('active');
       }
-      if (breaks.length < 1) {
-        btn.classList.add('hidden');
+    }
+  };
+  const toggleHiddenLinks = () => {
+    if (hLinks) {
+      hLinks.classList.toggle('hidden');
+    }
+  };
+  if (btn) {
+    btn.addEventListener('click', toggleHiddenLinks);
+    document.addEventListener('click', event => {
+      if (!btn.contains(event.target) && hLinks) {
         hLinks.classList.add('hidden');
       }
-    }
-    btn.setAttribute('count', breaks.length);
-    if (hLinks.children.length > 0) {
-      btn.textContent = 'Еще';
-      btn.classList.add('active');
-    } else {
-      btn.textContent = '';
-      btn.classList.remove('active');
-    }
+    });
   }
-};
-const toggleHiddenLinks = () => {
-  if (hLinks) {
-    hLinks.classList.toggle('hidden');
+  if (window) {
+    window.addEventListener('resize', updateNav);
+    window.addEventListener('DOMContentLoaded', updateNav);
+    window.addEventListener('load', updateNav);
   }
-};
-if (btn) {
-  btn.addEventListener('click', toggleHiddenLinks);
-  document.addEventListener('click', event => {
-    if (!btn.contains(event.target) && hLinks) {
-      hLinks.classList.add('hidden');
-    }
-  });
 }
-if (window) {
-  window.addEventListener('resize', updateNav);
-  window.addEventListener('DOMContentLoaded', updateNav);
-  window.addEventListener('load', updateNav);
-}
+menuGrouping();
 
 /***/ }),
 
