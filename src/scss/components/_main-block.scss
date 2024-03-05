@@ -36,12 +36,45 @@
     left: 50px;
     transform: translate(0%, -50%);
     z-index: 2;
+    max-width: 880px;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    &--bottom{
+      top: auto;
+      bottom: 50px;
+      transform: translate(0%);
+
+      @include max991 {
+        left: 20px;
+        bottom: 20px;
+      }
+    }
 
     @include max991 {
       top: auto;
       left: 20px;
       bottom: 20px;
       transform: translate(0%, 0%);
+    }
+
+    @include max400 {
+      right: 20px;
+    }
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--typography-white-medium-contrast);
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @include max400 {
+      margin-bottom: 10px;
     }
   }
 
@@ -57,6 +90,7 @@
     @include max991 {
       font-size: 34px;
       margin-bottom: 20px;
+      hyphens: auto;
     }
   }
 

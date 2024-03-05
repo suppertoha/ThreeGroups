@@ -1,14 +1,19 @@
-.about-section{
-  &__items{
+.about-section {
+  &__items {
     display: flex;
     gap: 20px;
-
     @include max768 {
       display: block;
     }
+
+    @media screen and (min-width: 767px) {
+      &--row-revers {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
-  &__item{
+  &__item {
     border-radius: 12px;
     overflow: hidden;
     padding: 40px 20px 40px 40px;
@@ -18,16 +23,26 @@
     @include max1366 {
       padding: 20px;
     }
+
+    @include max400 {
+      height: 300px;
+    }
   }
 
-  &__img{
+  &__img {
     flex: 0 1 705px;
-    picture{
+    max-height: 468px;
+
+    &--big{
+      max-height: 507px;
+    }
+    picture {
       display: flex;
       align-items: flex-start;
       overflow: hidden;
       border-radius: 12px;
-      img{
+      height: 100%;
+      img {
         height: 100%;
         width: 100%;
         min-height: 460px;
@@ -43,34 +58,43 @@
     }
 
     @include max768 {
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 20px;
   }
 
-  &__button{
+  &__button {
     display: none;
-    margin-top: 20px;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
     @include max400 {
       display: block;
     }
   }
 
-  &__content{
+  &__content {
     overflow: auto;
     max-height: 388px;
+    height: 100%;
+    position: relative;
+
+    &--big-section{
+      max-height: 428px;
+    }
 
     &::-webkit-scrollbar {
       height: 100%;
       width: 4px;
       border-radius: 12px;
-      background: #E7E7E7;
+      background: #e7e7e7;
     }
     &::-webkit-scrollbar-thumb {
       background: var(--ui-dark);
@@ -86,38 +110,34 @@
     }
   }
 
-
-
-  &__text{
+  &__text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.4;
-    padding-right: 20px;
 
     @include max400 {
       font-size: 14px;
     }
 
     color: var(--typography-black);
-    p{
+    p {
       margin-top: 0;
+      padding-right: 20px;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-bottom: 10px;
       }
     }
 
     @include max400 {
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 9;
       -webkit-box-orient: vertical;
       overflow: hidden;
 
-      &.active{
+      &.active {
         -webkit-line-clamp: 1000;
       }
     }
   }
 }
-
-

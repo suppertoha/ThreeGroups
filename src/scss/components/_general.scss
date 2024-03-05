@@ -15,7 +15,7 @@
   line-height: 140%;
   transition: 0.3s;
 
-  span {
+  &--text-grey {
     font-weight: 400;
     font-size: 14px;
     color: var(--typography-black-medium-contrast);
@@ -40,7 +40,7 @@
       &:hover {
         background: var(--ui-dark, #2c2f31);
         color: #ffffff;
-        span{
+        span {
           color: #ffffff;
           opacity: 0.7;
         }
@@ -143,6 +143,16 @@
     gap: 15px;
   }
 
+  &__descr {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--typography-black);
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
   &__link {
     display: flex;
     width: 37px;
@@ -161,6 +171,13 @@
         width: 40px;
         height: 40px;
       }
+    }
+
+    &--black {
+      border-radius: 500px;
+      width: 37px;
+      height: 37px;
+      background: var(--ui-dark);
     }
 
     @media screen and (min-width: 1024px) {
@@ -182,6 +199,10 @@
         width: 20px;
         height: 20px;
       }
+    }
+
+    &--white {
+      fill: var(--ui-white);
     }
   }
 }
@@ -379,8 +400,16 @@
 .margin-bottom {
   margin-bottom: 120px;
 
+  &--m60 {
+    margin-bottom: 60px;
+  }
+
   @include max600 {
     margin-bottom: 80px;
+
+    &--m60 {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -652,10 +681,20 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100%;
+  position: relative;
 
   @include max400 {
     flex-grow: 0;
   }
+
+  &--padding {
+    padding-bottom: 59px;
+    @include max1024 {
+      padding-bottom: 0;
+    }
+  }
+
   &__img {
     display: flex;
     align-items: flex-start;
@@ -667,7 +706,6 @@
 
   &__wrap {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     justify-content: space-between;
@@ -675,6 +713,9 @@
     left: 20px;
     bottom: 20px;
     right: 20px;
+    @include max1366 {
+      flex-wrap: wrap;
+    }
 
     .button-card {
       position: static;
@@ -684,11 +725,38 @@
     }
   }
 
+  &__anime {
+    padding-bottom: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    background: #fff;
+    transition: 0.3s;
+    @include max1024 {
+      position: static;
+      padding-bottom: 0;
+      margin: auto 0;
+    }
+  }
+
+  &__text {
+    padding: 0 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include max1024 {
+      display: none;
+    }
+  }
+
   &__header {
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(21deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-    max-height: 252px;
+    height: 252px;
     height: 100%;
 
     img {
@@ -697,15 +765,23 @@
     }
 
     @include max768 {
-      max-height: 431px;
+      height: 431px;
     }
 
     @include max400 {
-      max-height: 247px;
+      height: 247px;
     }
 
     &--h100 {
-      max-height: 100%;
+      height: 100%;
+    }
+
+    &--big {
+      height: 314px;
+
+      @include max400 {
+        height: 288px;
+      }
     }
   }
 
@@ -734,6 +810,35 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  &--flex {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0;
+    padding: 15px 20px;
+    min-height: 73px;
+
+    .basic-card__date {
+      flex-shrink: 0;
+
+      &--fz-modif {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--typography-black-medium-contrast);
+
+        @include max400 {
+          font-size: 12px;
+        }
+      }
+    }
+
+    @include max400 {
+      padding: 15px 20px;
+    }
+  }
 
   &__items {
     display: flex;
@@ -773,6 +878,14 @@
     }
   }
 
+  &__info {
+    font-size: 16px;
+
+    @include max400 {
+      font-size: 14px;
+    }
+  }
+
   span {
     font-weight: 400;
     line-height: 1.4;
@@ -782,6 +895,10 @@
   strong {
     font-weight: 700;
     font-size: 16px;
+
+    @include max400 {
+      font-size: 14px;
+    }
   }
 }
 .anime-button--hover {
@@ -825,10 +942,11 @@
   @media screen and (min-width: 1024px) {
     .animate-img img {
       transition: 0.3s;
+      transform: scale3d(1.01, 1.01, 1.01);
     }
     &:hover {
       .animate-img img {
-        transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.1, 1.1, 1.1);
       }
       .animate-arrow__inner {
         transform: translateX(0px);
@@ -838,6 +956,10 @@
             opacity: 1;
           }
         }
+      }
+
+      .animate-content {
+        bottom: 0;
       }
 
       .anime-button--hover {
@@ -938,6 +1060,14 @@
     bottom: 20px;
     left: 20px;
     right: 20px;
+
+    > * {
+      display: inline-block;
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 
   &__navigation {
@@ -955,6 +1085,17 @@
 
     @include max1366 {
       font-size: 20px;
+    }
+  }
+
+  &__profession {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--ui-white);
+
+    @include max400 {
+      font-size: 14px;
     }
   }
 }
@@ -1039,8 +1180,8 @@
   }
 }
 
-.poster{
-  &-slider--bottom30{
+.poster {
+  &-slider--bottom30 {
     margin-bottom: 30px;
   }
 }
