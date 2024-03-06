@@ -8,8 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>ТриГрупп</title>
-  <link rel="preload" href="fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/BebasNeue.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -163,7 +163,7 @@
           <span>Курск</span>
         </button>-->
 
-        <div class="select-block main-select main-select--header">
+        <form class="select-block main-select main-select--header">
 
           <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
             <option value="Курск">Курск</option>
@@ -178,7 +178,7 @@
             <option value="Краснодар">Краснодар</option>
           </select>
 
-        </div>
+        </form>
 
         <div class="header-bottom__search search">
           <div class="search__inner">
@@ -240,12 +240,11 @@
                 <div class="animate__images">
                   <div class="animate__image">
                     <picture>
-                      <source srcset="img/mic-mobile.png" type="image/webp" media="(max-width: 600px)" width="81" height="308" alt="img">
+                      <source srcset="img/mic-mobile.png" type="image/webp" media="(max-width: 600px)" width="81" height="308">
                       <source srcset="img/mic.png" type="image/webp">
                       <img loading="lazy" src="img/mic.png" class="image" width="790" height="498" alt="img">
                     </picture>
 
-                    <!--<img loading="lazy" src="img/mic.svg" class="image" alt="img">-->
                   </div>
                 </div>
               </div>

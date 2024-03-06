@@ -8,8 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>ТриГрупп</title>
-  <link rel="preload" href="fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/BebasNeue.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -163,7 +163,7 @@
           <span>Курск</span>
         </button>-->
 
-        <div class="select-block main-select main-select--header">
+        <form class="select-block main-select main-select--header">
 
           <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
             <option value="Курск">Курск</option>
@@ -178,7 +178,7 @@
             <option value="Краснодар">Краснодар</option>
           </select>
 
-        </div>
+        </form>
 
         <div class="header-bottom__search search">
           <div class="search__inner">
@@ -239,11 +239,22 @@
       <!-- main-block -->
 <section class="main-block main-block--mb container">
   <div class="main-block__inner">
-    <picture class="main-block__img">
-      <source srcset="img/main-block-mobi.webp" type="image/webp" media="(max-width: 500px)" width="345" height="620" alt="img">
-      <source srcset="img/main-block-pc.webp" type="image/webp" media="(max-width: 1024px)" width="1430" height="718" alt="img">
-      <img loading="lazy" src="img/main-block-pc.jpg" class="image"  alt="img">
-    </picture>
+
+    <!-- По дизайну должна быть картинка или видео, в данный момент картинка и контент закоментированны, и выводится только видео такие блоки будут еще артисты внутренняя и концерт, но там закоментирую видео -->
+    <div class="video-block">
+      <button class="btn-reset video-block__play" aria-label="Play video">
+        <svg>
+          <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+      <video class="video-block__content" src="about-video.mp4" muted loop preload="metadata"></video>
+    </div>
+
+    <!--<picture class="main-block__img">
+      <source srcset="img/main-block-mobi.webp" type="image/webp" media="(max-width: 500px)" width="345" height="620">
+      <source srcset="img/main-block-pc.webp" type="image/webp" media="(max-width: 1024px)" width="1430" height="718">
+      <img loading="lazy" src="img/main-block-pc.jpg" class="image"  width="1430" height="718" alt="main-block-img">
+    </picture>-->
 
     <div class="main-block__content">
       <h1 class="main-block__title">Мельница</h1>
@@ -277,8 +288,8 @@
         Наше концертное агентство поставило задачу организовать и провести концерт рок-группы, который будет незабываемым для зрителей и успешным для всех сторон. Мы внимательно выбирали подходящую площадку, обеспечили высококачественное акустическое и световое оборудование, создали привлекательное оформление сцены. Наша команда провела маркетинг исследования и рекламу концерта, чтобы привлечь максимальное количество поклонников рок-музыки.
       </p>
       <picture class="content-block__img">
-        <source srcset="img/content-block-mobi1.webp" type="image/webp" media="(max-width: 500px)" width="685" height="583" alt="img">
-        <source srcset="img/content-block-pc1.webp" type="image/webp" media="(max-width: 1024px)" width="685" height="654" alt="img">
+        <source srcset="img/content-block-mobi1.webp" type="image/webp" media="(max-width: 500px)" width="685" height="583" >
+        <source srcset="img/content-block-pc1.webp" type="image/webp" media="(max-width: 1024px)" width="685" height="654" >
         <img loading="lazy" src="img/content-block-pc1.jpg" class="image" alt="img">
       </picture>
     </li>
@@ -286,8 +297,8 @@
     <li class="content-block__item">
 
       <picture class="content-block__img">
-        <source srcset="img/content-block-mobi2.webp" type="image/webp" media="(max-width: 500px)" width="685" height="583" alt="img">
-        <source srcset="img/content-block-pc2.webp" type="image/webp" media="(max-width: 1024px)" width="685" height="654" alt="img">
+        <source srcset="img/content-block-mobi2.webp" type="image/webp" media="(max-width: 500px)" width="685" height="583">
+        <source srcset="img/content-block-pc2.webp" type="image/webp" media="(max-width: 1024px)" width="685" height="654">
         <img loading="lazy" src="img/content-block-pc2.jpg" class="image" alt="img">
       </picture>
 

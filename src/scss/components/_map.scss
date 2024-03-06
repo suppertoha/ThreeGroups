@@ -14,10 +14,45 @@
         padding-top: 0;
       }
     }
+
+    &--grid{
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__block{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include max1024 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include max400 {
+      gap: 15px;
+    }
   }
 
   &__widget {
     transform: scale(1.01);
+    height: 100%;
+
+
+    &--height-mobile{
+      >div{
+        height: 100%;
+      }
+      iframe{
+        min-height: 100%;
+
+        @include max400 {
+          height: 485px;
+        }
+      }
+    }
   }
 
   &__header {
@@ -54,28 +89,4 @@
       }
     }
   }
-
-  &__link {
-  }
-
-  &__btn {
-  }
-}
-.map--height-big {
-}
-.margin-bottom {
-}
-.container {
-}
-.list-reset {
-}
-.btn {
-}
-.concerts-cards {
-  &__button {
-  }
-}
-.btn--big {
-}
-.btn--black {
 }

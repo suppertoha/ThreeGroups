@@ -7,14 +7,16 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <div class="container">
-        <ul class="bread-crumbs list-reset bread-crumbs--margin-bottom">
-          <li class="bread-crumbs__item"><a href="main.html" class="bread-crumbs__link">Главная</a></li>
-          <li class="bread-crumbs__item">Помощь</li>
-
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item">Помощь</li>
         </ul>
+      </section>
 
-        <div class="content-page">
+      <section class="container">
+
+        <div class="content-page ">
           <h1>Помощь</h1>
           <div>
             <h3>
@@ -183,7 +185,7 @@
           </div>
         </div>
         <!--  -->
-      </div>
+      </section>
 
     </main>
     @include('partials/footer.html')

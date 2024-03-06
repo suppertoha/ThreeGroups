@@ -1133,55 +1133,20 @@
   }
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 15px;
-
-  input {
-    display: none;
-  }
-
-  span {
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    display: block;
-    cursor: pointer;
-    background: #ffffff;
-    border: 2px solid #568f02;
-    box-sizing: border-box;
-    border-radius: 50%;
-    margin-right: 20px;
-    position: relative;
-
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #568f02;
-      top: 3px;
-      left: 3px;
-      bottom: 6px;
-      bottom: 0;
-      opacity: 0;
-      transition: 300ms;
-      visibility: hidden;
-    }
-  }
-
-  input:checked + span::before {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
 .poster {
   &-slider--bottom30 {
     margin-bottom: 30px;
   }
+}
+
+.choice-location{
+  &__iframe{
+    border-radius: 12px;
+    overflow: hidden;
+
+    iframe{
+      transform: scale(1.01);
+    }
+  }
+
 }

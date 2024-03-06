@@ -1,3 +1,29 @@
+.multi-default{
+  width: 115px;
+  background: var(--ui-white);
+  border: 1px solid transparent;
+  padding: 8px 20px 8px 50px; /* Резервируем место под стрелку */
+  border-radius: 37px;
+  -webkit-appearance: none; /* Стиль для Safari */
+  -moz-appearance: none;    /* Стиль для Firefox */
+  appearance: none;         /* Стиль для прочих браузеров */
+
+  &--big{
+    width: 250px;
+    padding-left: 20px;
+  }
+
+  &--text{
+    width: 100%;
+    background: transparent;
+    font-weight: 700;
+    font-size: 48px;
+  }
+}
+
+
+
+/*main-select*/
 .main-select {
   min-width: 250px;
   font-weight: 400;
@@ -284,3 +310,4 @@
     }
   }
 }
+/*End main-select*/

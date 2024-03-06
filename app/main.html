@@ -8,8 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>ТриГрупп</title>
-  <link rel="preload" href="fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/BebasNeue.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -163,7 +163,7 @@
           <span>Курск</span>
         </button>-->
 
-        <div class="select-block main-select main-select--header">
+        <form class="select-block main-select main-select--header">
 
           <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
             <option value="Курск">Курск</option>
@@ -178,7 +178,7 @@
             <option value="Краснодар">Краснодар</option>
           </select>
 
-        </div>
+        </form>
 
         <div class="header-bottom__search search">
           <div class="search__inner">
@@ -339,10 +339,10 @@
             <a href="#" class="banner-block__right">
               <div class="banner-block__images animate-img">
                 <picture>
-                  <source srcset="img/banner-img-600.webp" type="image/webp" media="(max-width: 600px)" width="345" height="431" alt="img">
-                  <source srcset="img/banner-img-1024.webp" type="image/webp" media="(max-width: 1024px)" width="708" height="431" alt="img">
+                  <source srcset="img/banner-img-600.webp" type="image/webp" media="(max-width: 600px)" width="345" height="431" >
+                  <source srcset="img/banner-img-1024.webp" type="image/webp" media="(max-width: 1024px)" width="708" height="431" >
                   <source srcset="img/banner-img.webp" type="image/webp">
-                  <img src="banner-img.jpg" class="image" width="826" height="476" alt="img">
+                  <img src="banner-img.jpg" class="image" width="826" height="476" alt="banner-img">
                 </picture>
               </div>
 
@@ -1220,7 +1220,7 @@
                     Группа Dogstar, бас-гитаристом которой является Киану Ривз, выпустила первый с 2000 года альбом!
                   </p>
                 </div>
-                <img src="img/card-social-1.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+                <img loading="lazy" src="img/card-social-1.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
               </div>
             </li>
             <li class="card-social">
@@ -1237,7 +1237,7 @@
                     65 лет назад родился Виталий Дубинин. Поздравляем с днём рождения.
                   </p>
                 </div>
-                <img src="img/card-social-2.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+                <img loading="lazy" src="img/card-social-2.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
               </div>
             </li>
             <li class="card-social">
@@ -1266,7 +1266,7 @@
                   </p>
 
                 </div>
-                <img src="img/card-social-3.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
+                <img loading="lazy" src="img/card-social-3.jpg" class="card-social__img" width="270" height="200"  alt="social-img">
               </div>
             </li>
           </ul>
@@ -1324,8 +1324,8 @@
               <a href="#" class="card-basic anime-block-hover">
                 <div class="card-basic__header anim-block__img">
                   <picture class="card-basic__img animate-img">
-                    <source srcset="img/card-basic__img1-420.webp" type="image/webp" media="(max-width: 420px)" width="345" height="245" alt="img">
-                    <source srcset="img/card-basic__img1-768.webp" type="image/webp" media="(max-width: 768px)" width="708" height="431" alt="img">
+                    <source srcset="img/card-basic__img1-420.webp" type="image/webp" media="(max-width: 420px)" width="345" height="245">
+                    <source srcset="img/card-basic__img1-768.webp" type="image/webp" media="(max-width: 768px)" width="708" height="431">
                     <source srcset="img/card-basic__img1.webp" type="image/webp">
                     <img loading="lazy" src="img.card-basic__img1.jpg" class="image" width="463" height="258" alt="concert">
                   </picture>
@@ -1344,8 +1344,8 @@
               <a href="#" class="card-basic anime-block-hover">
                 <div class="card-basic__header anim-block__img">
                   <picture class="card-basic__img animate-img">
-                    <source srcset="img/card-basic__img2-420.webp" type="image/webp" media="(max-width: 420px)" width="345" height="245" alt="img">
-                    <source srcset="img/card-basic__img2-768.webp" type="image/webp" media="(max-width: 768px)" width="708" height="431" alt="img">
+                    <source srcset="img/card-basic__img2-420.webp" type="image/webp" media="(max-width: 420px)" width="345" height="245">
+                    <source srcset="img/card-basic__img2-768.webp" type="image/webp" media="(max-width: 768px)" width="708" height="431">
                     <source srcset="img/card-basic__img2.webp" type="image/webp">
                     <img loading="lazy" src="img.card-basic__img2.jpg" class="image" width="463" height="258" alt="concert">
                   </picture>
