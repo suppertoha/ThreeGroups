@@ -105,8 +105,8 @@ function mainBlockHeight() {
 
 mainBlockHeight();
 
-let resizeTimeout1;
+let resizeTimeoutMainBlock;
 window.addEventListener("resize", function () {
-  clearTimeout(resizeTimeout1);
-  resizeTimeout1 = setTimeout(mainBlockHeight, 100);
+  clearTimeout(resizeTimeoutMainBlock);
+  resizeTimeoutMainBlock = setTimeout(mainBlockHeight, 100);
 });

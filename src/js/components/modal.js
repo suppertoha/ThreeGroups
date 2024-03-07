@@ -101,7 +101,8 @@ function modal() {
     }, timeout);
   }
 }
-
 if (document.documentElement.clientWidth < 1024) {
-  modal();
+  modal()
 }
+
+
