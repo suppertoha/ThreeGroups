@@ -713,6 +713,10 @@
     left: 20px;
     bottom: 20px;
     right: 20px;
+    &--inner {
+      top: -55px;
+      bottom: auto;
+    }
     @include max1366 {
       flex-wrap: wrap;
     }
@@ -720,7 +724,7 @@
     .button-card {
       position: static;
       @include max1024 {
-        display: none;
+        //display: none;
       }
     }
   }
@@ -752,6 +756,46 @@
     }
   }
 
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 30px 20px;
+    background: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    height: 100%;
+    transition: 0.3s;
+    padding-top: 100px;
+
+    @include max400 {
+      font-size: 14px;
+    }
+  }
+
+  &__overflow {
+    overflow: auto;
+    max-height: 100%;
+    height: 100%;
+    p{
+      padding-right: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 100%;
+      width: 4px;
+      background: #d0d0d0;
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      width: 4px;
+      background: var(--ui-dark);
+    }
+  }
+
   &__header {
     position: relative;
     overflow: hidden;
@@ -762,6 +806,10 @@
     img {
       width: 100%;
       height: 100%;
+    }
+
+    &--static {
+      position: static;
     }
 
     @include max768 {
@@ -791,6 +839,7 @@
     line-height: 1.1;
     text-transform: uppercase;
     color: var(--ui-white);
+    transition: 0.3s;
 
     @include max400 {
       font-size: 20px;
@@ -810,7 +859,11 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-
+  position: relative;
+  z-index: 5;
+  &--white {
+    background: var(--ui-white);
+  }
   &--flex {
     display: flex;
     gap: 5px;
@@ -875,6 +928,10 @@
       font-size: 28px;
       line-height: 1.10023;
       text-transform: uppercase;
+
+      @include max400 {
+        font-size: 20px;
+      }
     }
   }
 
@@ -964,6 +1021,18 @@
 
       .anime-button--hover {
         background: var(--ui-accent);
+      }
+
+      .animate-dropdown {
+        top: 0;
+        background: var(--ui-white);
+        .card-basic__name {
+          color: var(--typography-black);
+        }
+
+        .card-basic__wrap--inner{
+          top: 25px;
+        }
       }
     }
   }
@@ -1139,14 +1208,19 @@
   }
 }
 
-.choice-location{
-  &__iframe{
+.choice-location {
+  &__iframe {
     border-radius: 12px;
     overflow: hidden;
 
-    iframe{
+    iframe {
       transform: scale(1.01);
     }
   }
-
 }
+
+.block{
+  position: relative;
+}
+
+

@@ -48,10 +48,65 @@ function hideExcessButtons() {
   });
 }
 
+
 hideExcessButtons();
 
 let resizeTimeout;
 window.addEventListener("resize", function () {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(hideExcessButtons, 100);
+});
+
+
+
+function mainBlockHeight() {
+  const bannerBlockJs = document.querySelector('.js-block-height');
+  if (!bannerBlockJs) return;
+  const itemMoreNum = bannerBlockJs.querySelector(".link-info__date--num");
+  const itemMoreButton = bannerBlockJs.querySelector(".item-more");
+  let excessButtons = 0;
+
+  const buttons = bannerBlockJs.querySelectorAll(".buttons-banner__item:not(.item-more)");
+  buttons.forEach(button => {
+    button.classList.remove("hidden-button");
+  })
+
+  itemMoreButton.classList.add("hidden-button");
+  [...buttons].reverse().forEach((button) => {
+    const buttonsBannerHeight = bannerBlockJs.offsetHeight;
+
+    if (buttonsBannerHeight > 182) {
+      button.classList.add("hidden-button");
+      excessButtons++;
+    }
+  });
+
+
+  if (excessButtons > 0) {
+    itemMoreButton.classList.remove("hidden-button");
+    itemMoreNum.textContent = excessButtons;
+    const buttonsBannerHeight = bannerBlockJs.offsetHeight;
+
+    if (buttonsBannerHeight > 182) {
+      const buttons = bannerBlockJs.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
+      buttons[buttons.length - 1].classList.add('hidden-button');
+      itemMoreNum.textContent = excessButtons + 1;
+    }
+
+  } else {
+    itemMoreButton.classList.add("hidden-button");
+  }
+
+  //itemMoreButton.addEventListener("click", function () {
+  //  const itemMoreInner = bannerBlockJs.querySelector(".item-more__inner");
+  //  itemMoreInner.classList.toggle("active");
+  //});
+}
+
+mainBlockHeight();
+
+let resizeTimeout1;
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimeout1);
+  resizeTimeout1 = setTimeout(mainBlockHeight, 100);
 });

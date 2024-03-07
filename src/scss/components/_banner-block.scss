@@ -73,13 +73,13 @@
     @include max600 {
       padding: 33px 30px;
 
-      .buttons-banner__item{
-        &.item-hidden{
-          &:nth-child(n + 4) {
-            display: none;
-          }
-        }
-      }
+      //.buttons-banner__item{
+      //  &.item-hidden{
+      //    &:nth-child(n + 4) {
+      //      display: none;
+      //    }
+      //  }
+      //}
     }
   }
 

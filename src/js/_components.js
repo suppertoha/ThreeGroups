@@ -7,5 +7,6 @@ import './components/slider';
 import './components/select';
 import './components/text-js-mobile-hidden';
 import './components/video-block';
+import './components/modal';
 
 
