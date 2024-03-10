@@ -258,6 +258,11 @@
     font-size: 12px;
     color: var(--typography-black);
     margin-bottom: 20px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     *:last-child{
       margin-bottom: 0;
     }
