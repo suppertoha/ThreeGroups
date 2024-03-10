@@ -5268,4 +5268,154 @@ body.lock {
     width: fit-content;
   }
 }
+
+.questioner-form__content {
+  border-radius: 12px;
+  padding: 40px 20px 20px 20px;
+  background: var(--ui-bg);
+  max-width: 500px;
+}
+.questioner-form .popup__close {
+  color: #646566;
+  font-size: 18px;
+  right: 20px;
+  top: 17px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1024px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+
+.inputMain {
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  border: 1px solid transparent;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 7px;
+  padding: 10px 15px;
+  height: 40px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background: var(--ui-white);
+}
+
+@media screen and (min-width: 1024px) {
+  .inputMain:hover {
+    border: 1px solid #c6985d;
+  }
+}
+.form-item {
+  display: block;
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  color: #acacac;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.84px;
+  pointer-events: none;
+  left: 15px;
+  top: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 40px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--typography-black-medium-contrast);
+}
+
+.textareaMain {
+  top: 0px;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.inputMain:not(:-moz-placeholder-shown) ~ .form-label {
+  top: -10px;
+  transform: translateY(0%);
+  font-size: 10px;
+}
+
+.inputMain:not(:-ms-input-placeholder) ~ .form-label {
+  top: -10px;
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  font-size: 10px;
+}
+
+.inputMain:focus ~ .form-label,
+.inputMain:not(:placeholder-shown) ~ .form-label {
+  top: -14px;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  font-size: 8px;
+}
+
+.inputMain:focus {
+  border: 1px solid #c6985d;
+}
+
+.main-form {
+  max-width: 700px;
+}
+.main-form__subtite {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--typography-black);
+  margin-top: 10px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.main-form__info {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--typography-black);
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 30px;
+}
+.main-form__button {
+  width: 100%;
+}
+
+.main-form__field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main-form__label {
+  color: #ffb21c;
+}
+
+.form-label__comment {
+  resize: none;
+  min-height: 150px;
+}
+
+.inputMain:focus {
+  border-color: #ffb21c;
+  outline: none;
+}
+
+.main-form__error {
+  color: #ff2727;
+  position: absolute;
+  bottom: -15px;
+  font-size: 12px;
+  left: 0;
+}
 /*# sourceMappingURL=main.css.map */
