@@ -6,6 +6,8 @@
     margin-top: -60px;
     border-radius: 12px 12px 70px 12px;
 
+
+
     @include max768 {
       border-radius: 12px 12px 12px 12px;
     }
@@ -18,13 +20,19 @@
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-
+    background-size: cover;
     @media screen and (max-width: 1250px) {
       flex-direction: column;
     }
 
+    @include max1366 {
+      background-image: url(../img/bg-social-1366.svg);
+      border-radius: 22px;
+    }
+
     @include max768 {
       background-image: url(../img/bg-social-768.svg);
+      border-radius: 12px;
     }
   }
 
@@ -93,6 +101,10 @@
         top: 40px;
         left: -10px;
         background-size: 72%;
+      }
+
+      @include max400 {
+        display: none;
       }
     }
 

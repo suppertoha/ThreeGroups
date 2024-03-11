@@ -3729,6 +3729,7 @@ a:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  background-size: cover;
 }
 @media screen and (max-width: 1250px) {
   .social-section__inner {
@@ -3738,9 +3739,16 @@ a:hover {
     flex-direction: column;
   }
 }
+@media (max-width: 1366px) {
+  .social-section__inner {
+    background-image: url(../img/bg-social-1366.svg);
+    border-radius: 22px;
+  }
+}
 @media (max-width: 768px) {
   .social-section__inner {
     background-image: url(../img/bg-social-768.svg);
+    border-radius: 12px;
   }
 }
 .social-section__content {
@@ -3816,6 +3824,11 @@ a:hover {
     top: 40px;
     left: -10px;
     background-size: 72%;
+  }
+}
+@media (max-width: 500px) {
+  .social-section__block:before {
+    display: none;
   }
 }
 .social-section__block:after {
