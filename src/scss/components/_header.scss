@@ -55,6 +55,9 @@
     line-height: 140%;
     transition: 0.3s;
     flex-shrink: 0;
+    transition: 0.3s;
+
+
 
     &--tel{
       color: var(--typography-black, #0D0D0D);
@@ -72,7 +75,7 @@
 
     @media screen and (min-width: 1024px) {
       &:hover{
-        color: var(--typography-black-medium-contrast, rgba(13, 13, 13, 1));
+        color: var(--typography-black, #0d0d0d);
       }
     }
 

@@ -1,27 +1,25 @@
-.multi-default{
+.multi-default {
   width: 115px;
   background: var(--ui-white);
   border: 1px solid transparent;
   padding: 8px 20px 8px 50px; /* Резервируем место под стрелку */
   border-radius: 37px;
   -webkit-appearance: none; /* Стиль для Safari */
-  -moz-appearance: none;    /* Стиль для Firefox */
-  appearance: none;         /* Стиль для прочих браузеров */
+  -moz-appearance: none; /* Стиль для Firefox */
+  appearance: none; /* Стиль для прочих браузеров */
 
-  &--big{
+  &--big {
     width: 250px;
     padding-left: 20px;
   }
 
-  &--text{
+  &--text {
     width: 100%;
     background: transparent;
     font-weight: 700;
     font-size: 48px;
   }
 }
-
-
 
 /*main-select*/
 .main-select {
@@ -307,6 +305,74 @@
           height: 20px;
         }
       }
+    }
+  }
+
+  &--popup {
+    margin-bottom: 10px;
+    .choices__placeholder {
+      opacity: 1;
+      line-height: 1.4;
+      color: var(--typography-black-medium-contrast);
+
+      position: relative;
+      &:before {
+        content: "*";
+        display: inline-block;
+        width: 20px;
+        color: #ffb21c;
+        font-size: 22px;
+        height: 20px;
+        position: absolute;
+        left: 51%;
+        top: -3px;
+      }
+    }
+    .choices[data-type*="select-one"] .choices__inner {
+      padding-bottom: 5.5px;
+    }
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        .choices__inner {
+          background: var(--ui-white);
+          border: 1px solid var(--ui-accent, #ffb21c);
+        }
+      }
+    }
+
+    .is-open {
+      .choices__inner {
+        background: var(--ui-white);
+        border-radius: 7px;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+      }
+    }
+
+    .is-active{
+      .choices__placeholder {
+        position: relative;
+        &:before {
+          content: "*";
+          display: inline-block;
+          width: 20px;
+          color: #ffb21c;
+          font-size: 22px;
+          height: 20px;
+          position: absolute;
+          left: 53%;
+          top: 0px;
+        }
+      }
+    }
+    .choices__inner {
+      border-radius: 7px;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+    }
+
+    .main-select__star {
+      color: var(--ui-accent);
     }
   }
 }

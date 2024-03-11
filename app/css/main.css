@@ -1826,6 +1826,7 @@ a:hover {
   transition: 0.3s;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  transition: 0.3s;
 }
 .header-top__link--tel {
   color: var(--typography-black, #0D0D0D);
@@ -1844,7 +1845,7 @@ a:hover {
 }
 @media screen and (min-width: 1024px) {
   .header-top__link:hover {
-    color: var(--typography-black-medium-contrast, rgb(13, 13, 13));
+    color: var(--typography-black, #0d0d0d);
   }
 }
 .header-top__link--mobile {
@@ -4360,6 +4361,63 @@ a:hover {
     height: 20px;
   }
 }
+.main-select--popup {
+  margin-bottom: 10px;
+}
+.main-select--popup .choices__placeholder {
+  opacity: 1;
+  line-height: 1.4;
+  color: var(--typography-black-medium-contrast);
+  position: relative;
+}
+.main-select--popup .choices__placeholder:before {
+  content: "*";
+  display: inline-block;
+  width: 20px;
+  color: #ffb21c;
+  font-size: 22px;
+  height: 20px;
+  position: absolute;
+  left: 51%;
+  top: -3px;
+}
+.main-select--popup .choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 5.5px;
+}
+@media screen and (min-width: 1024px) {
+  .main-select--popup:hover .choices__inner {
+    background: var(--ui-white);
+    border: 1px solid var(--ui-accent, #ffb21c);
+  }
+}
+.main-select--popup .is-open .choices__inner {
+  background: var(--ui-white);
+  border-radius: 7px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+.main-select--popup .is-active .choices__placeholder {
+  position: relative;
+}
+.main-select--popup .is-active .choices__placeholder:before {
+  content: "*";
+  display: inline-block;
+  width: 20px;
+  color: #ffb21c;
+  font-size: 22px;
+  height: 20px;
+  position: absolute;
+  left: 53%;
+  top: 0px;
+}
+.main-select--popup .choices__inner {
+  border-radius: 7px;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+.main-select--popup .main-select__star {
+  color: var(--ui-accent);
+}
 
 /*End main-select*/
 .calendar__body {
@@ -5297,7 +5355,7 @@ body.lock {
   font-size: 16px;
   width: 100%;
   border-radius: 7px;
-  padding: 10px 15px;
+  padding: 10px 15px 0px;
   height: 40px;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
@@ -5306,7 +5364,7 @@ body.lock {
 
 @media screen and (min-width: 1024px) {
   .inputMain:hover {
-    border: 1px solid #c6985d;
+    border: 1px solid var(--ui-accent, #ffb21c);
   }
 }
 .form-item {
@@ -5358,15 +5416,15 @@ body.lock {
 
 .inputMain:focus ~ .form-label,
 .inputMain:not(:placeholder-shown) ~ .form-label {
-  top: -14px;
+  top: -10px;
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .inputMain:focus {
-  border: 1px solid #c6985d;
+  border: 1px solid var(--ui-accent, #ffb21c);
 }
 
 .main-form {

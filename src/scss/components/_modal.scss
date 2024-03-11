@@ -151,14 +151,14 @@ body.lock {
   width: 100%;
 
   border-radius: 7px;
-  padding: 10px 15px;
+  padding: 10px 15px 0px;
   height: 40px;
   backdrop-filter: blur(14px);
   background: var(--ui-white);
 }
 @media screen and (min-width: 1024px) {
   .inputMain:hover {
-    border: 1px solid #c6985d;
+    border: 1px solid var(--ui-accent, #ffb21c);
   }
 }
 .form-item {
@@ -206,14 +206,14 @@ body.lock {
 }
 .inputMain:focus ~ .form-label,
 .inputMain:not(:placeholder-shown) ~ .form-label {
-  top: -14px;
+  top: -10px;
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
-  font-size: 8px;
+  font-size: 10px;
 }
 .inputMain:focus {
-  border: 1px solid #c6985d;
+  border: 1px solid var(--ui-accent, #ffb21c);
 }
 .main-form {
   max-width: 700px;
