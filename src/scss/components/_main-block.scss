@@ -99,6 +99,14 @@
     flex-direction: column;
     margin-top: 60px;
     gap: 10px;
+
+    @include max400 {
+      .btn--big2 {
+        padding: 15px 27px;
+        align-self: flex-start;
+        min-width: 260px;
+      }
+    }
   }
 
   &__items {
@@ -124,6 +132,10 @@
       font-size: 14px;
       text-align: center;
       color: var(--typography-black-medium-contrast);
+
+      @include max400 {
+        font-size: 12px;
+      }
     }
   }
 

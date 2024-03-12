@@ -40,6 +40,10 @@
     transform: scale(1.01);
     height: 100%;
 
+    @include max400 {
+      height: 460px;
+    }
+
 
     &--height-mobile{
       >div{
@@ -49,7 +53,7 @@
         min-height: 100%;
 
         @include max400 {
-          height: 485px;
+          height: 100%;
         }
       }
     }

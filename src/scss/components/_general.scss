@@ -337,6 +337,19 @@
   line-height: 1.4;
   margin-bottom: 60px;
 
+  &--pc{
+    @include max400 {
+      display: none;
+    }
+  }
+
+  &--mobile{
+    display: none;
+    @include max400 {
+      display: block;
+    }
+  }
+
   &--bottom30 {
     margin-bottom: 30px;
   }
@@ -1199,6 +1212,10 @@
 
   &--mb {
     margin-bottom: 40px;
+
+    @include max400 {
+      margin-bottom: 20px;
+    }
   }
 }
 

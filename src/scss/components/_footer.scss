@@ -161,7 +161,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    font-size: 14px;
     transition: 0.3s;
 
     &--tel{
@@ -174,7 +173,7 @@
     }
 
     @include max600 {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
