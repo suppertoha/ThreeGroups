@@ -54,12 +54,6 @@
 
         <nav class="mobile-nav__block" data-menu>
           <div class="mobile-nav__container">
-            <button class="btn-reset mobile-nav__location location-btn btn btn--white btn--img-left">
-              <svg class="location-btn__icon">
-                <use xlink:href="img/sprite.svg#geo-location"></use>
-              </svg>
-              <span>Курск</span>
-            </button>
 
             <ul class="header-top__list list-reset header-top__list--mobile">
               <li class="header-top__item">
@@ -146,34 +140,37 @@
         </button>-->
 
 
+        <form class="header-bottom__form" action="#">
+          <div class="select-block main-select main-select--header-pc main-select--header">
 
-        <form class="select-block main-select main-select--header">
+            <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
+              <option value="Курск">Курск</option>
+              <option value="Тольятти">Тольятти</option>
+              <option value="Омск">Омск</option>
+              <option value="Железногорск">Железногорск</option>
+              <option value="Ульяновск">Ульяновск</option>
+              <option value="Краснодар">Краснодар</option>
+              <option value="Омск">Омск</option>
+              <option value="Железногорск">Железногорск</option>
+              <option value="Ульяновск">Ульяновск</option>
+              <option value="Краснодар">Краснодар</option>
+            </select>
 
-          <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
-            <option value="Курск">Курск</option>
-            <option value="Тольятти">Тольятти</option>
-            <option value="Омск">Омск</option>
-            <option value="Железногорск">Железногорск</option>
-            <option value="Ульяновск">Ульяновск</option>
-            <option value="Краснодар">Краснодар</option>
-            <option value="Омск">Омск</option>
-            <option value="Железногорск">Железногорск</option>
-            <option value="Ульяновск">Ульяновск</option>
-            <option value="Краснодар">Краснодар</option>
-          </select>
+          </div>
 
+          <div class="header-bottom__search search">
+            <div class="search__inner">
+              <input type="text" placeholder="Исполнитель или город" class="search__input input-reset">
+              <button class="search__button btn-reset">
+                <svg class="search__icon">
+                  <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </form>
 
-        <div class="header-bottom__search search">
-          <div class="search__inner">
-            <input type="text" placeholder="Исполнитель или город" class="search__input input-reset">
-            <button class="search__button btn-reset">
-              <svg class="search__icon">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
+
 
         <div class="header-bottom__social social">
           <ul class="social__inner list-reset">

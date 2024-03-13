@@ -230,8 +230,15 @@
 
   &--header {
     min-width: 0;
-    @include max768 {
-      display: none;
+
+    &-pc{
+      @include max991 {
+        display: none;
+        position: absolute;
+        left: 34%;
+        top: 15px;
+        z-index: 150;
+      }
     }
 
     .choices__inner {
@@ -378,6 +385,12 @@
     .main-select__star {
       color: var(--ui-accent);
     }
+  }
+}
+
+.header.active{
+  .main-select--header-pc{
+    display: block;
   }
 }
 /*End main-select*/
