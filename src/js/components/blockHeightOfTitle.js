@@ -48,7 +48,6 @@ function hideExcessButtons() {
   });
 }
 
-
 hideExcessButtons();
 
 let resizeTimeout;
@@ -56,8 +55,6 @@ window.addEventListener("resize", function () {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(hideExcessButtons, 100);
 });
-
-
 
 function mainBlockHeight() {
   const bannerBlockJs = document.querySelector('.js-block-height');
